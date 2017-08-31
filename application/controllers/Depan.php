@@ -203,6 +203,7 @@ class Depan extends CI_Controller {
 				'css_profil' => 'depan/1-atas-depan/css-profil-atas-depan',
 				'css_foto' => 'depan/1-atas-depan/css-foto-atas-depan',
 				'javascript_foto' => 'depan/1-atas-depan/javascript-foto-atas-depan',
+				'javascript_select' => 'depan/3-bawah-depan/javascript-select-bawah-depan',
 
 				'objek_wisata'  => $this->Depan_model->objek_wisata($this->uri->segment(3))
 			);

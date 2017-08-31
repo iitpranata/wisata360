@@ -76,7 +76,7 @@
 					<div class="mdl-cell--1-offset">
 					</div>
 					<div class="mdl_cell mdl_cell--5-col">
-						<h6 style="margin-top: 0px; margin-bottom: 0px; padding-top: 10px;">Kenapa anda memberi 3 bintang?</h6>
+						<h6 class="wisata_hasil_bintang" style="margin-top: 0px; margin-bottom: 0px; padding-top: 10px;">Kenapa anda memberi bintang?</h6>
 							<div class="mdl-textfield mdl-js-textfield">
 								<textarea class="mdl-textfield__input" name="hasil_ulasan" type="text" maxlength="160" rows="5" cols="200" id="ulasan" required></textarea>
 								<label class="mdl-textfield__label" for="ulasan">Tulis ulasan kamu disini...</label>

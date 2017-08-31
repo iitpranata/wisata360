@@ -7,6 +7,7 @@
       if($this->uri->segment(2) == "objek_wisata")
       {
         $this->load->view($javascript_map);
+        $this->load->view($javascript_select);
       }
     ?>
   </body>
