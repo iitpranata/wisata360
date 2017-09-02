@@ -92,4 +92,22 @@ class Belakang extends CI_Controller {
 		  $this->load->view('belakang/2-tengah-belakang', $tengah_belakang);
 		  $this->load->view('belakang/3-bawah-belakang');
     }
+
+    public function ulasan_objek_wisata()
+    {        
+      $id_objekwisata = $this->uri->segment(3);
+      $tengah_belakang = array(
+        'nama_halaman' => 'Ubah Objek Wisata',
+        'header_utama' => 'belakang/2-tengah-belakang/header-utama-tengah-belakang',
+        'header_menu' => 'belakang/2-tengah-belakang/header-menu-tengah-belakang',
+        'nav_utama' => 'belakang/2-tengah-belakang/nav-menu-tengah-belakang.php',
+        'halaman_utama' => 'belakang/2-tengah-belakang/ulasan-objek-wisata-tengah-belakang',
+        
+        'ulasan_objek_wisata' => $this->Belakang_model->ulasan_objek_wisata($id_objekwisata)
+      );
+
+		  $this->load->view('belakang/1-atas-belakang');
+		  $this->load->view('belakang/2-tengah-belakang', $tengah_belakang);
+		  $this->load->view('belakang/3-bawah-belakang');
+    }
 }
