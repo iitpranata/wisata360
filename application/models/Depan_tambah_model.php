@@ -6,11 +6,7 @@ class Depan_tambah_model extends CI_Model{
 	}
  
 	function objek_wisata__rating($objek_wisata_rating){
-		$this->db->insert('objek_wisata__rating', $objek_wisata_rating);
-	}
-
-	function objek_wisata__ulasan($objek_wisata_ulasan){
-		$this->db->insert('objek_wisata__ulasan', $objek_wisata_ulasan);
+		$this->db->insert('objek_wisata__rating_ulasan', $objek_wisata_rating);
 	}
 
 	function jumlah_rating($rating_wisata, $id_objekwisata){

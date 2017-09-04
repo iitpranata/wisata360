@@ -34,11 +34,10 @@ class Depan_model extends CI_Model{
 
 	function ulasanrating($id_wisata)
 	{
-		$this->db->select('objek_wisata__rating.jumlah__objek_wisata__rating, objek_wisata__ulasan.hasil__objek_wisata__ulasan');
-		$this->db->from('objek_wisata__rating');
-		$this->db->join('objek_wisata__ulasan', 'objek_wisata__ulasan.id__objek_wisata__ulasan = objek_wisata__rating.id__objek_wisata__rating', 'left');
-		$this->db->order_by('objek_wisata__rating.id__objek_wisata__rating', "desc");
-		$this->db->where('objek_wisata__rating.objek_wisata__post_id__objek_wisata__post', $id_wisata);
+		$this->db->select('*');
+		$this->db->from('objek_wisata__rating_ulasan');
+		$this->db->order_by('objek_wisata__rating_ulasan.id__objek_wisata__rating_ulasan', "desc");
+		$this->db->where('objek_wisata__rating_ulasan.objek_wisata__post_id__objek_wisata__post', $id_wisata);
 		return $this->db->get()->result();
 	}
 	
@@ -46,15 +45,15 @@ class Depan_model extends CI_Model{
 	{
 		$this->db->select('*');
 		$this->db->where('objek_wisata__post_id__objek_wisata__post', $id_wisata);
-		$query = $this->db->get('objek_wisata__ulasan');
+		$query = $this->db->get('objek_wisata__rating_ulasan');
 		$num = $query->num_rows();
 	}
 
 	function ratarata_rating($id_wisata)
 	{
-		$this->db->select_avg('jumlah__objek_wisata__rating');
-		$this->db->where('objek_wisata__rating.objek_wisata__post_id__objek_wisata__post', $id_wisata);
-		$t = $this->db->get('objek_wisata__rating')->row();
-        return $t->jumlah__objek_wisata__rating;
+		$this->db->select_avg('rating__objek_wisata__rating_ulasan');
+		$this->db->where('objek_wisata__rating_ulasan.objek_wisata__post_id__objek_wisata__post', $id_wisata);
+		$t = $this->db->get('objek_wisata__rating_ulasan')->row();
+        return $t->rating__objek_wisata__rating_ulasan;
 	}
 }
