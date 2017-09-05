@@ -31,6 +31,8 @@ class Belakang_tambah extends CI_Controller {
                 'kategori__objek_wisata__post' => $this->input->post('kategori_wisata'),
                 'tanggal__objek_wisata__post' => date('y/m/d'),
                 'keterangan__objek_wisata__post' => $this->input->post('keterangan_wisata'),
+                'lat_map__objek_wisata__post' => $this->input->post('lat_wisata'),
+                'lng_map__objek_wisata__post' => $this->input->post('lng_wisata'),
                 'foto_virtual_reality__objek_wisata__post' => $fotovier['raw_name'].$fotovier['file_ext']
             );
 

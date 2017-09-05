@@ -130,25 +130,25 @@
 			<div class="mdl-cell mdl-cell--10-col mdl-shadow--2dp" style="height: 125px">
 				<div class="mdl-card__supporting-text">
 					 <?php
-					 	if($row->jumlah__objek_wisata__rating == 5){
+					 	if($row->rating__objek_wisata__rating_ulasan == 5){
 							for($i=1; $i <= 5; $i++){
 								echo '<i class="fa fa-star" aria-hidden="true" style="color: #EDB867; font-size : 20px;"></i>';
 							}
-						 }elseif ($row->jumlah__objek_wisata__rating == 4) {
+						 }elseif ($row->rating__objek_wisata__rating_ulasan == 4) {
 							for($i=1; $i <= 4; $i++){
 								echo '<i class="fa fa-star" aria-hidden="true" style="color: #EDB867; font-size : 20px;"></i>';
 							}
 							for($j=1; $j <= 1; $j++){ 
 								echo '<i class="fa fa-star" aria-hidden="true" style="color: #D2D2D2; font-size : 20px;"></i>';
 							}
-						 }elseif ($row->jumlah__objek_wisata__rating == 3) {
+						 }elseif ($row->rating__objek_wisata__rating_ulasan == 3) {
 							for($i=1; $i <= 3; $i++){
 								echo '<i class="fa fa-star" aria-hidden="true" style="color: #EDB867; font-size : 20px;"></i>';
 							}
 							for($j=1; $j <= 2; $j++){ 
 								echo '<i class="fa fa-star" aria-hidden="true" style="color: #D2D2D2; font-size : 20px;"></i>';
 							}
-						 }elseif ($row->jumlah__objek_wisata__rating == 2) {
+						 }elseif ($row->rating__objek_wisata__rating_ulasan == 2) {
 							for($i=1; $i <= 2; $i++){
 								echo '<i class="fa fa-star" aria-hidden="true" style="color: #EDB867; font-size : 20px;"></i>';
 							}
@@ -165,7 +165,7 @@
 						 }
 					 ?>
 					<h6 style="margin-top: 0px;margin-bottom: 0px;">
-						<?php echo $row->hasil__objek_wisata__ulasan ?>
+						<?php echo $row->ulasan__objek_wisata__rating_ulasan ?>
 					</h6>
 				</div>
 			</div>

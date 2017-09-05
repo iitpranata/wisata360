@@ -16,7 +16,8 @@ class Depan_tambah extends CI_Controller {
             'objek_wisata__pengguna_id__objek_wisata__pengguna' => $this->input->post('id_objekwisata_pengguna'),
             'objek_wisata__post_id__objek_wisata__post' => $this->input->post('id_objekwisata_post'),
             'rating__objek_wisata__rating_ulasan' => $this->input->post('hasil_rating'),
-            'ulasan__objek_wisata__rating_ulasan' => $this->input->post('hasil_ulasan')
+            'ulasan__objek_wisata__rating_ulasan' => $this->input->post('hasil_ulasan'),
+            'tanggal__objek_wisata__rating_ulasan' => date('y/m/d'),
         );
         $this->Depan_tambah_model->objek_wisata__rating($objek_wisata_rating);
 

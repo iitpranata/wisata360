@@ -14,30 +14,30 @@
                 <tbody>
                     <?php foreach ($ulasan_objek_wisata as $row) { ?>
                     <tr>
-                        <td class="mdl-data-table__cell--non-numeric" style="white-space:normal;"><?php echo $row->hasil__objek_wisata__ulasan ?></td>
+                        <td class="mdl-data-table__cell--non-numeric" style="white-space:normal;"><?php echo $row->ulasan__objek_wisata__rating_ulasan ?></td>
                         <td style="color : green;"><?php echo "POSITIF"?></td>
                         <td> 
                             <?php
-                                echo $row->jumlah__objek_wisata__rating;
-                                if($row->jumlah__objek_wisata__rating == 5){
+                                echo $row->rating__objek_wisata__rating_ulasan;
+                                if($row->rating__objek_wisata__rating_ulasan == 5){
                                     for($i=1; $i <= 5; $i++){
                                         echo '<i class="material-icons" style="font-size : 10px;">star</i>';
                                     }
-                                }elseif ($row->jumlah__objek_wisata__rating == 4) {
+                                }elseif ($row->rating__objek_wisata__rating_ulasan == 4) {
                                     for($i=1; $i <= 4; $i++){
                                         echo '<i class="material-icons" style="font-size : 10px;">star</i>';
                                     }
                                     for($j=1; $j <= 1; $j++){ 
                                         echo '<i class="material-icons" style="font-size : 10px;">star_border</i>';
                                     }
-                                }elseif ($row->jumlah__objek_wisata__rating == 3) {
+                                }elseif ($row->rating__objek_wisata__rating_ulasan == 3) {
                                     for($i=1; $i <= 3; $i++){
                                         echo '<i class="material-icons" style="font-size : 10px;">star</i>';
                                     }
                                     for($j=1; $j <= 2; $j++){ 
                                         echo '<i class="material-icons" style="font-size : 10px;">star_border</i>';
                                     }
-                                }elseif ($row->jumlah__objek_wisata__rating == 2) {
+                                }elseif ($row->rating__objek_wisata__rating_ulasan == 2) {
                                     for($i=1; $i <= 2; $i++){
                                         echo '<i class="material-icons" style="font-size : 10px;">star</i>';
                                     }
@@ -54,7 +54,7 @@
                                 }
                             ?>
                         </td>
-                        <td><?php echo $row->tanggal__objek_wisata__post ?></td>
+                        <td><?php echo $row->tanggal__objek_wisata__rating_ulasan ?></td>
                         <td><?php echo $row->objek_wisata__pengguna_id__objek_wisata__pengguna ?></td>
                         <td>
                             <a class="aksi" style="text-decoration: none;" href=""> Hapus</a>
