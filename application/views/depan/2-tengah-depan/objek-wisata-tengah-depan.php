@@ -99,7 +99,7 @@
 		<div id="map" style="height: 350px;width: 100%;"></div>
 		<script>
 			function initMap() {
-			        var uluru = {lat: -3.7869977, lng: 102.2519146};
+			        var uluru = {lat: <?php echo $row->lat_map__objek_wisata__post ?>, lng: <?php echo $row->lng_map__objek_wisata__post ?>};
 			        var map = new google.maps.Map(document.getElementById('map'), {
 			          zoom: 17,
 			          center: uluru
