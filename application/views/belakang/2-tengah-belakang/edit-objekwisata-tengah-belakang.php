@@ -38,6 +38,12 @@
         </div>
     <div class="mdl-cell mdl-cell--6-col">
         <div class="mdl-cell mdl-cell--12-col">
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <?php $lat=array( 'class'=>'mdl-textfield__input', 'type' => 'text', 'id' => 'lat_wisata'); echo form_input('lat_wisata', '', $lat); $label_lat = array('class' => 'mdl-textfield__label'); echo form_label('Latitude','lat_wisata', $label_lat); ?></div>
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <?php $lng=array( 'class'=>'mdl-textfield__input', 'type' => 'text', 'id' => 'lng_wisata'); echo form_input('lng_wisata', '', $lng); $label_lng = array('class' => 'mdl-textfield__label'); echo form_label('Longitude','lng_wisata', $label_lng); ?></div>
+        </div>
+        <div class="mdl-cell mdl-cell--12-col">
             <label for="fotovr" class="custom-file-upload"> <i class="fa fa-cloud-upload"></i> Upload Wisata</label>
             <?php $foto=array( 'type'=>'file', 'id' => 'fotovr', 'name' => 'fotovr'); echo form_input($foto); ?></div>
         <div class="mdl-cell mdl-cell--12-col">

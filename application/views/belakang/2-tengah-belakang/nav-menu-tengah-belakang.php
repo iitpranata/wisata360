@@ -3,6 +3,9 @@
   <a class="mdl-navigation__link" href="<?php echo base_url()?>index.php/belakang/postingan_objek_wisata"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">burst_mode</i>Postingan</a>
   <a class="mdl-navigation__link" href="<?php echo base_url()?>index.php/belakang/ulasan"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">comment</i>Ulasan</a>
   <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">people</i>Pengguna</a>
+  <hr>
+  <a class="mdl-navigation__link" href="<?php echo base_url()?>index.php/belakang/rating"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">star</i>Rating</a>
+  <a class="mdl-navigation__link" href="<?php echo base_url()?>index.php/belakang/sentiment_analysis"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">mode_comment</i>Sentiment Analysis</a>
   <div class="mdl-layout-spacer"></div>
   <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">help_outline</i><span class="visuallyhidden">Help</span>Bantuan</a>
 </nav>
