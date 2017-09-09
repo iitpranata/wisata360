@@ -15,26 +15,26 @@
                         <td style="color : green;"><?php echo "POSITIF"?></td>
                         <td> 
                             <?php
-                                echo $row->jumlah_hasil_rating__objek_wisata__post;
-                                if($row->jumlah_hasil_rating__objek_wisata__post == 5){
+                                echo $row->floor__objek_wisata__rating;
+                                if($row->floor__objek_wisata__rating == 5){
                                     for($i=1; $i <= 5; $i++){
                                         echo '<i class="material-icons" style="font-size : 10px;">star</i>';
                                     }
-                                }elseif ($row->jumlah_hasil_rating__objek_wisata__post == 4) {
+                                }elseif ($row->floor__objek_wisata__rating == 4) {
                                     for($i=1; $i <= 4; $i++){
                                         echo '<i class="material-icons" style="font-size : 10px;">star</i>';
                                     }
                                     for($j=1; $j <= 1; $j++){ 
                                         echo '<i class="material-icons" style="font-size : 10px;">star_border</i>';
                                     }
-                                }elseif ($row->jumlah_hasil_rating__objek_wisata__post == 3) {
+                                }elseif ($row->floor__objek_wisata__rating == 3) {
                                     for($i=1; $i <= 3; $i++){
                                         echo '<i class="material-icons" style="font-size : 10px;">star</i>';
                                     }
                                     for($j=1; $j <= 2; $j++){ 
                                         echo '<i class="material-icons" style="font-size : 10px;">star_border</i>';
                                     }
-                                }elseif ($row->jumlah_hasil_rating__objek_wisata__post == 2) {
+                                }elseif ($row->floor__objek_wisata__rating == 2) {
                                     for($i=1; $i <= 2; $i++){
                                         echo '<i class="material-icons" style="font-size : 10px;">star</i>';
                                     }

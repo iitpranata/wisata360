@@ -19,25 +19,25 @@
           <div class="mdl-grid" style="padding-left: 0px; padding-bottom : 0px; padding-top: 0px;">
             <div class="mdl-cell mdl-cell--5-col mdl-cell--5-col-tablet mdl-cell--2-col-phone">
               <?php
-					 	if($row->jumlah_hasil_rating__objek_wisata__post == 5){
+					 	if($row->floor__objek_wisata__rating == 5){
 							for($i=1; $i <= 5; $i++){
 								echo '<i class="fa fa-star" aria-hidden="true" style="color: #EDB867; font-size : 20px;"></i>';
 							}
-						 }elseif ($row->jumlah_hasil_rating__objek_wisata__post == 4) {
+						 }elseif ($row->floor__objek_wisata__rating == 4) {
 							for($i=1; $i <= 4; $i++){
 								echo '<i class="fa fa-star" aria-hidden="true" style="color: #EDB867; font-size : 20px;"></i>';
 							}
 							for($j=1; $j <= 1; $j++){ 
 								echo '<i class="fa fa-star" aria-hidden="true" style="color: #D2D2D2; font-size : 20px;"></i>';
 							}
-						 }elseif ($row->jumlah_hasil_rating__objek_wisata__post == 3) {
+						 }elseif ($row->floor__objek_wisata__rating == 3) {
 							for($i=1; $i <= 3; $i++){
 								echo '<i class="fa fa-star" aria-hidden="true" style="color: #EDB867; font-size : 20px;"></i>';
 							}
 							for($j=1; $j <= 2; $j++){ 
 								echo '<i class="fa fa-star" aria-hidden="true" style="color: #D2D2D2; font-size : 20px;"></i>';
 							}
-						 }elseif ($row->jumlah_hasil_rating__objek_wisata__post == 2) {
+						 }elseif ($row->floor__objek_wisata__rating == 2) {
 							for($i=1; $i <= 2; $i++){
 								echo '<i class="fa fa-star" aria-hidden="true" style="color: #EDB867; font-size : 20px;"></i>';
 							}
