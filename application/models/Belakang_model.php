@@ -8,9 +8,9 @@ class Belakang_model extends CI_Model{
  
 	function semua_postingan()
     {
-		$this->db->select('*');
+		$this->db->select('objek');
         $this->db->from('objek_wisata__post');
-        $this->db->join('objek_wisata__rating_ulasan', 'objek_wisata__rating_ulasan.id__objek_wisata__rating_ulasan = objek_wisata__post.id__objek_wisata__post', 'left');
+        $this->db->join('objek_wisata__rating', 'objek_wisata__rating.objek_wisata__post_id__objek_wisata__post = objek_wisata__post.id__objek_wisata__post', 'left');
 		return $this->db->get()->result();
     }
 
