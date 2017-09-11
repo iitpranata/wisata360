@@ -3,37 +3,38 @@
             <table class="mdl-data-table mdl-js-data-table">
                 <thead>
                     <tr>
-                        <th class="mdl-data-table__cell--non-numeric">Objek Wisata</th>
-                        <th>Ulasan</th>
+                        <th>Tanggal</tg>
+                        <th class="mdl-data-table__cell--non-numeric">Nama</th>
                         <th>Rating</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach ($ulasan_data as $row) { ?>
+                    <?php foreach ($rating_objek_wisata as $row) { ?>
                     <tr>
-                        <td class="mdl-data-table__cell--non-numeric" style="width: 718px;"><a href="<?php echo base_url()."index.php/belakang/ulasan_objek_wisata/".$row->id__objek_wisata__post ?>" style="text-decoration:none;"><?php echo $row->nama__objek_wisata__post ?></a></td>
-                        <td style="color : green;"><?php echo "POSITIF"?></td>
-                        <td> 
+                        <td> <?php echo $row->tanggal__objek_wisata__rating_ulasan ?></td>
+                        <td class="mdl-data-table__cell--non-numeric" style="white-space:normal;width: 480px;"><?php echo $row->objek_wisata__pengguna_id__objek_wisata__pengguna ?></td>
+                        <td style="width: 480px;"> 
                             <?php
-                                if($row->floor__objek_wisata__rating == 5){
+                                if($row->rating__objek_wisata__rating_ulasan == 5){
                                     for($i=1; $i <= 5; $i++){
                                         echo '<i class="material-icons" style="font-size : 10px;">star</i>';
                                     }
-                                }elseif ($row->floor__objek_wisata__rating == 4) {
+                                }elseif ($row->rating__objek_wisata__rating_ulasan == 4) {
                                     for($i=1; $i <= 4; $i++){
                                         echo '<i class="material-icons" style="font-size : 10px;">star</i>';
                                     }
                                     for($j=1; $j <= 1; $j++){ 
                                         echo '<i class="material-icons" style="font-size : 10px;">star_border</i>';
                                     }
-                                }elseif ($row->floor__objek_wisata__rating == 3) {
+                                }elseif ($row->rating__objek_wisata__rating_ulasan == 3) {
                                     for($i=1; $i <= 3; $i++){
                                         echo '<i class="material-icons" style="font-size : 10px;">star</i>';
                                     }
                                     for($j=1; $j <= 2; $j++){ 
                                         echo '<i class="material-icons" style="font-size : 10px;">star_border</i>';
                                     }
-                                }elseif ($row->floor__objek_wisata__rating == 2) {
+                                }elseif ($row->rating__objek_wisata__rating_ulasan == 2) {
                                     for($i=1; $i <= 2; $i++){
                                         echo '<i class="material-icons" style="font-size : 10px;">star</i>';
                                     }
@@ -48,8 +49,12 @@
                                         echo '<i class="material-icons" style="font-size : 10px;">star_border</i>';
                                     }
                                 }
-                                echo " (".$row->floor__objek_wisata__rating.")";
+
+                                echo " (".$row->rating__objek_wisata__rating_ulasan.")";
                             ?>
+                        </td>
+                        <td>
+                            <a class="aksi" style="text-decoration: none;" href=""> Hapus</a>
                         </td>
                         <?php } ?>
                     </tr>

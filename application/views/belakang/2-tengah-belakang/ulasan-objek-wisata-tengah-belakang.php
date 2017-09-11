@@ -14,11 +14,10 @@
                 <tbody>
                     <?php foreach ($ulasan_objek_wisata as $row) { ?>
                     <tr>
-                        <td class="mdl-data-table__cell--non-numeric" style="white-space:normal;"><?php echo $row->ulasan__objek_wisata__rating_ulasan ?></td>
+                        <td class="mdl-data-table__cell--non-numeric" style="white-space:normal;width: 480px;"><?php echo $row->ulasan__objek_wisata__rating_ulasan ?></td>
                         <td style="color : green;"><?php echo "POSITIF"?></td>
                         <td> 
                             <?php
-                                echo $row->rating__objek_wisata__rating_ulasan;
                                 if($row->rating__objek_wisata__rating_ulasan == 5){
                                     for($i=1; $i <= 5; $i++){
                                         echo '<i class="material-icons" style="font-size : 10px;">star</i>';
@@ -52,6 +51,8 @@
                                         echo '<i class="material-icons" style="font-size : 10px;">star_border</i>';
                                     }
                                 }
+
+                                echo " (".$row->rating__objek_wisata__rating_ulasan.")";
                             ?>
                         </td>
                         <td><?php echo $row->tanggal__objek_wisata__rating_ulasan ?></td>
