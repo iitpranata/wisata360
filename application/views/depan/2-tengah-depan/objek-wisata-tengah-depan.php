@@ -5,25 +5,25 @@
 		<h6 style="margin-bottom: 0px; margin-top: 5px;"><?php echo $row->alamat__objek_wisata__post; ?></h6>
 		<div class="mdl-grid" style="padding-left: 0px; padding-bottom : 0px; padding-top: 0px;">
 			<?php 
-				if($ratarata_rating == 5){
+				if($row->floor__objek_wisata__rating == 5){
 					for($i=1; $i <= 5; $i++){
 						echo '<i class="fa fa-star" aria-hidden="true" style="color: #EDB867; font-size : 20px;"></i>';
 					}
-					}elseif ($ratarata_rating == 4) {
+					}elseif ($row->floor__objek_wisata__rating == 4) {
 					for($i=1; $i <= 4; $i++){
 						echo '<i class="fa fa-star" aria-hidden="true" style="color: #EDB867; font-size : 20px;"></i>';
 					}
 					for($j=1; $j <= 1; $j++){ 
 						echo '<i class="fa fa-star" aria-hidden="true" style="color: #D2D2D2; font-size : 20px;"></i>';
 					}
-					}elseif ($ratarata_rating == 3) {
+					}elseif ($row->floor__objek_wisata__rating == 3) {
 					for($i=1; $i <= 3; $i++){
 						echo '<i class="fa fa-star" aria-hidden="true" style="color: #EDB867; font-size : 20px;"></i>';
 					}
 					for($j=1; $j <= 2; $j++){ 
 						echo '<i class="fa fa-star" aria-hidden="true" style="color: #D2D2D2; font-size : 20px;"></i>';
 					}
-					}elseif ($ratarata_rating == 2) {
+					}elseif ($row->floor__objek_wisata__rating == 2) {
 					for($i=1; $i <= 2; $i++){
 						echo '<i class="fa fa-star" aria-hidden="true" style="color: #EDB867; font-size : 20px;"></i>';
 					}
@@ -59,11 +59,14 @@
 						<?php 
 							echo form_open('index.php/depan_tambah/objek_wisata');
 							$data = array(
-								'id_objekwisata_post' => $row->id__objek_wisata__post,
-								'id_objekwisata_pengguna' => '2',
-								'jumlah_objekwisata_rating' => $ratarata_rating
+								'type'  => 'hidden',
+								'name'  => 'id_objekwisata_post',
+								'id'    => 'id_objekwisata_post',
+								'value' => $row->id__objek_wisata__post,
 							);
-							echo form_hidden($data); 
+							
+							echo form_input($data);
+							echo form_hidden('id_objekwisata_pengguna', '1');
 						?>
 						<select name="hasil_rating" class="peringkat" required>
 							<option value="1">1</option>

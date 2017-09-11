@@ -214,7 +214,6 @@ class Depan extends CI_Controller {
 				'utama_tengah' => 'depan/2-tengah-depan/objek-wisata-tengah-depan',
 
 				'objek_wisata'  => $this->Depan_model->objek_wisata($id_wisata),
-				'ratarata_rating' => floor($this->Depan_model->ratarata_rating($id_wisata)),
 				'ulasanrating' => $this->Depan_model->ulasanrating($id_wisata),
 				'jumlah_ulasan' => $this->Depan_model->jumlah_ulasan($id_wisata)
 			);

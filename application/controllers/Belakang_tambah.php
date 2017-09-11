@@ -36,7 +36,13 @@ class Belakang_tambah extends CI_Controller {
                 'foto_virtual_reality__objek_wisata__post' => $fotovier['raw_name'].$fotovier['file_ext']
             );
 
-            $this->Belakang_tambah_model->objek_wisata($objek_wisata);
+            $id_objekwisata = $this->Belakang_tambah_model->objek_wisata($objek_wisata);
+
+            $objek_wisata__rating = array(
+                'objek_wisata__post_id__objek_wisata__post' => $id_objekwisata
+            );
+            $this->Belakang_tambah_model->objek_wisata__rating($objek_wisata__rating);
+
             redirect('index.php/belakang/tambah_objek_wisata');
         }
     }

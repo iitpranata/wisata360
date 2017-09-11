@@ -7,5 +7,10 @@ class Belakang_tambah_model extends CI_Model{
  
 	function objek_wisata($objek_wisata){
 		$this->db->insert('objek_wisata__post', $objek_wisata);
+		return $this->db->insert_id();
+	}
+
+	function objek_wisata__rating($objek_wisata_rating){
+		$this->db->insert('objek_wisata__rating', $objek_wisata_rating);
 	}
 }
