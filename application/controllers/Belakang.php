@@ -132,7 +132,7 @@ class Belakang extends CI_Controller {
     public function rating_objek_wisata(){
       $id_objekwisata = $this->uri->segment(3);
       $tengah_belakang = array(
-        'nama_halaman' => 'Rating',
+        'nama_halaman' => 'Rating ',
         'header_utama' => 'belakang/2-tengah-belakang/header-utama-tengah-belakang',
         'header_menu' => 'belakang/2-tengah-belakang/header-menu-tengah-belakang',
         'nav_utama' => 'belakang/2-tengah-belakang/nav-menu-tengah-belakang.php',

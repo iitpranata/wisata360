@@ -7,7 +7,11 @@
             foreach ($nama_objek_wisata as $row) {
               echo $nama_halaman.$row->nama__objek_wisata__post;
             }
-          }else{
+          }if ($this->uri->segment(2) == "rating_objek_wisata") {
+            foreach ($nama_objek_wisata as $row) {
+              echo $nama_halaman.$row->nama__objek_wisata__post;
+            }
+          } else {
             echo $nama_halaman; 
           }
           ?></span>
