@@ -7,6 +7,7 @@ class Depan_tambah extends CI_Controller {
 	{
     	parent:: __construct();
            $this->load->model('Depan_tambah_model');
+           $this->load->model('Belakang_filter_text_model');
 
   	}
 
@@ -20,6 +21,10 @@ class Depan_tambah extends CI_Controller {
             'tanggal__objek_wisata__rating_ulasan' => date('y/m/d'),
         );
         $this->Depan_tambah_model->objek_wisata__rating_ulasan($objek_wisata_rating_ulasan);
+        
+        $id_objekwisata = $this->input->post('id_objekwisata_post');
+        $objek_wisata__ulasan = $this->input->post('hasil_ulasan');
+        $this->Belakang_filter_text_model->objek_wisata_ulasan($id_objekwisata, $objek_wisata__ulasan);
             
         $id_objekwisata = $this->input->post('id_objekwisata_post');
         $objek_wisata__auto = array(
