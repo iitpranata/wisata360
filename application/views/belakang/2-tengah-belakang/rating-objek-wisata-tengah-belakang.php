@@ -6,7 +6,6 @@
                         <th>Tanggal</tg>
                         <th class="mdl-data-table__cell--non-numeric">Nama</th>
                         <th>Rating</th>
-                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -52,9 +51,6 @@
 
                                 echo " (".$row->rating__objek_wisata__rating_ulasan.")";
                             ?>
-                        </td>
-                        <td>
-                            <a class="aksi" style="text-decoration: none;" href=""> Hapus</a>
                         </td>
                         <?php } ?>
                     </tr>

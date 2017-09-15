@@ -156,7 +156,26 @@ class Belakang extends CI_Controller {
         'nav_utama' => 'belakang/2-tengah-belakang/nav-menu-tengah-belakang.php',
         'halaman_utama' => 'belakang/2-tengah-belakang/sentiment-analysis-tengah-belakang',
 
-        //'ulasan_data' => $this->Belakang_model->semua_ulasan()
+        'sentiment_analysis' => $this->Belakang_model->sentiment_analysis()
+      );
+
+		  $this->load->view('belakang/1-atas-belakang');
+		  $this->load->view('belakang/2-tengah-belakang', $tengah_belakang);
+		  $this->load->view('belakang/3-bawah-belakang');
+    }
+
+    public function sentiment_analysis_objek_wisata()
+    {
+      $id_objekwisata = $this->uri->segment(3);        
+      $tengah_belakang = array(
+        'nama_halaman' => 'Sentiment Analysis ',
+        'header_utama' => 'belakang/2-tengah-belakang/header-utama-tengah-belakang',
+        'header_menu' => 'belakang/2-tengah-belakang/header-menu-tengah-belakang',
+        'nav_utama' => 'belakang/2-tengah-belakang/nav-menu-tengah-belakang.php',
+        'halaman_utama' => 'belakang/2-tengah-belakang/sentiment-analysis-objek-wisata-tengah-belakang',
+
+        'sentiment_analysis' => $this->Belakang_model->sentiment_analysis_objek_wisata($id_objekwisata),
+        'nama_objek_wisata' => $this->Belakang_model->objek_wisata($id_objekwisata)
       );
 
 		  $this->load->view('belakang/1-atas-belakang');
