@@ -1,5 +1,5 @@
 <header class="demo-drawer-header">
-          <img src="<?php echo base_url(); ?>assets/belakang/gambar/user.jpg" class="demo-avatar">
+          <img src="<?php echo base_url(); ?>assets/admin/gambar/user.jpg" class="demo-avatar">
           <div class="demo-avatar-dropdown">
             <span>hello@example.com</span>
             <div class="mdl-layout-spacer"></div>

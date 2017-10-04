@@ -1,7 +1,7 @@
 <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
 <div class="mdl-grid">
     <div class="mdl-cell mdl-cell--6-col">
-        <?php echo form_open_multipart( 'index.php/Belakang_tambah/objek_wisata'); ?>
+        <?php echo form_open_multipart( 'index.php/admin_tambah/objek_wisata'); ?>
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
             <?php $nama=array( 'class'=>'mdl-textfield__input', 'type' => 'text', 'id' => 'nama_wisata'); echo form_input('nama_wisata', '', $nama); $label_nama = array('class' => 'mdl-textfield__label'); echo form_label('Nama','nama_wisata', $label_nama); ?></div>
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">

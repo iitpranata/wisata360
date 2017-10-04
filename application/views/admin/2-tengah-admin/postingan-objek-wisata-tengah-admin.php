@@ -1,6 +1,6 @@
 <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
         <div class="mdl-card__supporting-text"> 
-            <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" href="<?php echo base_url() ?>index.php/belakang/tambah_objek_wisata" target="blank_">
+            <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" href="<?php echo base_url() ?>index.php/admin/tambah_objek_wisata" target="blank_">
                     <i class="material-icons">add</i> Objek Wisata Baru
             </a>
         </div>
@@ -62,7 +62,7 @@
                         <td><?php echo $row->tanggal__objek_wisata__post ?></td>
                         <td><?php echo $row->kategori__objek_wisata__post ?></td>
                         <td><a class="aksi" style="text-decoration: none;" target="blank_" href="<?php echo base_url()."index.php/depan/objek_wisata/".$row->id__objek_wisata__post ?>">Lihat </a>|
-                            <a class="aksi" style="text-decoration: none;" target="blank_" href="<?php echo base_url()."index.php/belakang/edit_objek_wisata/".$row->id__objek_wisata__post?>"> Edit </a>|
+                            <a class="aksi" style="text-decoration: none;" target="blank_" href="<?php echo base_url()."index.php/admin/edit_objek_wisata/".$row->id__objek_wisata__post?>"> Edit </a>|
                             <a class="aksi" style="text-decoration: none;" href=""> Hapus</a>
                         </td>
                         <?php } ?>

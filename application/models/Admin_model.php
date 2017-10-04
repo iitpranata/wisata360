@@ -1,5 +1,5 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-class Belakang_model extends CI_Model{
+class Admin_model extends CI_Model{
 	function __construct()
 	{
 		parent::__construct();

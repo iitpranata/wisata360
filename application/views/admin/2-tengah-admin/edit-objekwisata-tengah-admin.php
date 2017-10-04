@@ -1,7 +1,7 @@
 <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
 <div class="mdl-grid">
     <div class="mdl-cell mdl-cell--6-col">
-        <?php echo form_open_multipart('index.php/Belakang_edit/objek_wisata'); ?>
+        <?php echo form_open_multipart('index.php/admin_edit/objek_wisata'); ?>
             <?php foreach ($objek_wisata as $row) { ?>
             <?php echo form_hidden('id_objekwisata', $row->id__objek_wisata__post)?>
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
