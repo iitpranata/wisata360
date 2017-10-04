@@ -596,4 +596,9 @@ a img{
   .android-footer .mdl-mega-footer--bottom-section {
     display: none;
   }
+
+  .komentar-objek-wisata{
+    height: auto;
+    min-height: 125;
+  }
 }

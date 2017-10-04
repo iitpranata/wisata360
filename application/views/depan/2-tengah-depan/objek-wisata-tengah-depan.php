@@ -130,7 +130,7 @@
 			<div class="mdl-cell mdl-cell--2-col">
 				<div style="background-image: url('<?php echo base_url() ?>assets/depan/gambar/profil.JPG');display: inline-block;width: 130px;height: 130px;border-radius: 50%;background-repeat: no-repeat;background-position: center center;background-size: cover;"></div>
 			</div>
-			<div class="mdl-cell mdl-cell--10-col mdl-shadow--2dp" style="height: 125px">
+			<div class="mdl-cell mdl-cell--10-col mdl-shadow--2dp komentar-objek-wisata">
 				<div class="mdl-card__supporting-text">
 					 <?php
 					 	if($row->rating__objek_wisata__rating_ulasan == 5){
