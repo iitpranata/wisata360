@@ -1,11 +1,11 @@
 <div style="height: 60px; padding-top: 10px; background-color : #ececec;">
-              <h4 style="margin-top: 10px; margin-left: 100px;">Ulasan</h4>
+              <h4 style="margin-top: 10px; margin-left: 100px;">Populer</h4>
           </div>
 <div class="android-more-section">
                 <div class="android-card-container mdl-grid">
                   <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--4dp">
                     <div class="mdl-card__media">
-                      <img src="<?php echo base_url() ?>assets/depan/gambar/more-from-4.png">
+                      <img src="<?php echo base_url() ?>assets/pengujung/gambar/more-from-4.png">
                     </div>
                     <div class="mdl-card__title" style="padding-bottom: 0px; padding-left: 25px; padding-right: 25px;overflow: hidden; text-overflow: ellipsis; display: -webkit-box;line-height: 16px;     /* fallback */max-height: 45px;      /* fallback */-webkit-line-clamp: 2; /* number of lines to show */-webkit-box-orient: vertical;">
                       <h4 class="mdl-card__title-text">Fort Marlborough</h4>
@@ -39,7 +39,7 @@
 
                   <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--4dp">
                     <div class="mdl-card__media">
-                      <img src="<?php echo base_url() ?>assets/depan/gambar/more-from-4.png">
+                      <img src="<?php echo base_url() ?>assets/pengujung/gambar/more-from-4.png">
                     </div>
                     <div class="mdl-card__title" style="padding-bottom: 0px; padding-left: 25px; padding-right: 25px;">
                       <h4 class="mdl-card__title-text">Pantai Panjang</h4>
@@ -73,7 +73,7 @@
 
                   <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--4dp">
                     <div class="mdl-card__media">
-                      <img src="<?php echo base_url() ?>assets/depan/gambar/more-from-4.png">
+                      <img src="<?php echo base_url() ?>assets/pengujung/gambar/more-from-4.png">
                     </div>
                     <div class="mdl-card__title" style="padding-bottom: 0px; padding-left: 25px; padding-right: 25px;overflow: hidden; text-overflow: ellipsis; display: -webkit-box;line-height: 16px;     /* fallback */max-height: 45px;      /* fallback */-webkit-line-clamp: 2; /* number of lines to show */-webkit-box-orient: vertical;">
                       <h4 class="mdl-card__title-text">Rumah Pengasingan Bung Soekarno</h4>
@@ -107,7 +107,7 @@
 
                   <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--4dp">
                     <div class="mdl-card__media">
-                      <img src="<?php echo base_url() ?>assets/depan/gambar/more-from-4.png">
+                      <img src="<?php echo base_url() ?>assets/pengujung/gambar/more-from-4.png">
                     </div>
                     <div class="mdl-card__title" style="padding-bottom: 0px; padding-left: 25px; padding-right: 25px;">
                       <h4 class="mdl-card__title-text">Pantai Tapak Padri</h4>
@@ -141,7 +141,7 @@
 
                   <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--4dp">
                     <div class="mdl-card__media">
-                      <img src="<?php echo base_url() ?>assets/depan/gambar/more-from-4.png">
+                      <img src="<?php echo base_url() ?>assets/pengujung/gambar/more-from-4.png">
                     </div>
                     <div class="mdl-card__title" style="padding-bottom: 0px; padding-left: 25px; padding-right: 25px;">
                       <h4 class="mdl-card__title-text">Pantai Padang Batuah</h4>
@@ -175,7 +175,7 @@
 
                   <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--4dp">
                     <div class="mdl-card__media">
-                      <img src="<?php echo base_url() ?>assets/depan/gambar/more-from-4.png">
+                      <img src="<?php echo base_url() ?>assets/pengujung/gambar/more-from-4.png">
                     </div>
                     <div class="mdl-card__title" style="padding-bottom: 0px; padding-left: 25px; padding-right: 25px;overflow: hidden; text-overflow: ellipsis; display: -webkit-box;line-height: 16px;     /* fallback */max-height: 45px;      /* fallback */-webkit-line-clamp: 2; /* number of lines to show */-webkit-box-orient: vertical;">
                       <h4 class="mdl-card__title-text">Jenggalu Advanture Camp</h4>

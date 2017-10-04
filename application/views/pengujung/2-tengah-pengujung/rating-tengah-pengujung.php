@@ -1,13 +1,13 @@
 <div class="android-more-section">
 	<div class="android-card-container mdl-grid">
-    <?php foreach ($populer_data as $row) {?>
+    <?php foreach ($rating_data as $row) {?>
 		<div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--4dp">
       <div class="mdl-card__media">
         <?php 
           if ($row->thumbnail__objek_wisata__post == null) {
-           echo '<img src="'.base_url() .'assets/depan/gambar/'. $row->foto_virtual_reality__objek_wisata__post.'" height="226.344px">';
+           echo '<img src="'.base_url() .'assets/pengujung/gambar/'. $row->foto_virtual_reality__objek_wisata__post.'" height="226.344px">';
           }else {
-            echo '<img src="'.base_url() .'assets/depan/gambar/'. $row->thumbnail__objek_wisata__post.'">';
+            echo '<img src="'.base_url() .'assets/pengujung/gambar/'. $row->thumbnail__objek_wisata__post.'">';
           }
         ?>
         
@@ -63,7 +63,7 @@
           <i class="fa fa-comment" aria-hidden="true" style="padding-left: 10px;"></i> 27 Ulasan
         </span>
       </div>
-			<div class="mdl-card__actions"> <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="<?php echo base_url()."index.php/depan/objek_wisata/".$row->id__objek_wisata__post ?>" data-upgraded=",MaterialButton">
+			<div class="mdl-card__actions"> <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="<?php echo base_url()."index.php/pengujung/objek_wisata/".$row->id__objek_wisata__post ?>" data-upgraded=",MaterialButton">
           Selengkapnya
           <i class="material-icons">chevron_right</i>
         </a>

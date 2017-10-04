@@ -46,7 +46,7 @@
 		<script>
 			pannellum.viewer('panorama', {
 			            "type": "equirectangular",
-			            "panorama": "<?php echo base_url() ?>assets/depan/gambar/<?php echo $row->foto_virtual_reality__objek_wisata__post ?>",
+			            "panorama": "<?php echo base_url() ?>assets/pengujung/gambar/<?php echo $row->foto_virtual_reality__objek_wisata__post ?>",
 			            "autoLoad": true,
 			            "autoRotate": -2
 			        });
@@ -57,7 +57,7 @@
 					<div class="mdl_cell mdl_cell--5-col">
 						<h6 style="margin-top: 0px; margin-bottom: 0px; padding-top: 10px;padding-bottom: 5px;">Penilaian anda tentang objek wisata ini?</h6>
 						<?php 
-							echo form_open('index.php/depan_tambah/objek_wisata');
+							echo form_open('index.php/pengujung_tambah/objek_wisata');
 							$data = array(
 								'type'  => 'hidden',
 								'name'  => 'id_objekwisata_post',
@@ -128,7 +128,7 @@
 		<?php foreach ($ulasanrating as $row) { ?>
 		<div class="mdl-grid">
 			<div class="mdl-cell mdl-cell--2-col">
-				<div style="background-image: url('<?php echo base_url() ?>assets/depan/gambar/profil.JPG');display: inline-block;width: 130px;height: 130px;border-radius: 50%;background-repeat: no-repeat;background-position: center center;background-size: cover;"></div>
+				<div style="background-image: url('<?php echo base_url() ?>assets/pengujung/gambar/profil.JPG');display: inline-block;width: 130px;height: 130px;border-radius: 50%;background-repeat: no-repeat;background-position: center center;background-size: cover;"></div>
 			</div>
 			<div class="mdl-cell mdl-cell--10-col mdl-shadow--2dp komentar-objek-wisata">
 				<div class="mdl-card__supporting-text">
@@ -188,7 +188,7 @@
 		<div class="mdl-grid">
 			<div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--2dp">
 				<div class="mdl-card__media">
-					<img src="<?php echo base_url() ?>assets/depan/gambar/more-from-4.png" width="100%" height="100%">
+					<img src="<?php echo base_url() ?>assets/pengujung/gambar/more-from-4.png" width="100%" height="100%">
 				</div>
 				<div class="mdl-card__title mdl-card--expand" style="padding-bottom: 0px; padding-left: 25px; padding-right: 25px;overflow: hidden; text-overflow: ellipsis; display: -webkit-box;line-height: 16px;     /* fallback */max-height: 45px;      /* fallback */-webkit-line-clamp: 2; /* number of lines to show */-webkit-box-orient: vertical;">
 					<h2 class="mdl-card__title-text">Fort Marlborough</h2>
@@ -211,7 +211,7 @@
 		<div class="mdl-grid">
 			<div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--2dp">
 				<div class="mdl-card__media">
-					<img src="<?php echo base_url() ?>assets/depan/gambar/more-from-4.png" width="100%" height="100%">
+					<img src="<?php echo base_url() ?>assets/pengujung/gambar/more-from-4.png" width="100%" height="100%">
 				</div>
 				<div class="mdl-card__title mdl-card--expand" style="padding-bottom: 0px; padding-left: 25px; padding-right: 25px;overflow: hidden; text-overflow: ellipsis; display: -webkit-box;line-height: 16px;     /* fallback */max-height: 45px;      /* fallback */-webkit-line-clamp: 2; /* number of lines to show */-webkit-box-orient: vertical;">
 					<h2 class="mdl-card__title-text">Fort Marlborough</h2>
@@ -234,7 +234,7 @@
 		<div class="mdl-grid">
 			<div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--2dp">
 				<div class="mdl-card__media">
-					<img src="<?php echo base_url() ?>assets/depan/gambar/more-from-4.png" width="100%" height="100%">
+					<img src="<?php echo base_url() ?>assets/pengujung/gambar/more-from-4.png" width="100%" height="100%">
 				</div>
 				<div class="mdl-card__title mdl-card--expand" style="padding-bottom: 0px; padding-left: 25px; padding-right: 25px;overflow: hidden; text-overflow: ellipsis; display: -webkit-box;line-height: 16px;     /* fallback */max-height: 45px;      /* fallback */-webkit-line-clamp: 2; /* number of lines to show */-webkit-box-orient: vertical;">
 					<h2 class="mdl-card__title-text">Fort Marlborough</h2>

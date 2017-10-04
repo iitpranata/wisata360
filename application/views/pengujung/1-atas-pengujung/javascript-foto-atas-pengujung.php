@@ -1,0 +1,1 @@
+<script type="text/javascript" src="<?php echo base_url() ?>assets/pengujung/pannellum/pannellum.js"></script>

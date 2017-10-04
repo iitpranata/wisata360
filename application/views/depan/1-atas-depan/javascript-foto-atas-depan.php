@@ -1,1 +1,0 @@
-<script type="text/javascript" src="<?php echo base_url() ?>assets/depan/pannellum/pannellum.js"></script>
