@@ -1,5 +1,6 @@
 <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
         <div class="mdl-card__supporting-text">
+            <h4>1. Preprocessing</h4>
             <table class="mdl-data-table mdl-js-data-table">
                 <thead>
                     <tr>
@@ -20,5 +21,7 @@
                     </tr>
                 </tbody>
             </table>
+            <h4>2. Pembobotan</h4>
+            
         </div>
     </div>
