@@ -19,8 +19,8 @@
 $config['facebook_app_id']              = '1852314341675009';
 $config['facebook_app_secret']          = '89dd49b7607b5d1d07117f466f02aa33';
 $config['facebook_login_type']          = 'web';
-$config['facebook_login_redirect_url']  = 'index.php/pengguna/';
-$config['facebook_logout_redirect_url'] = 'index.php/pengguna/';
+$config['facebook_login_redirect_url']  = 'index.php/pengguna_login_facebook/';
+$config['facebook_logout_redirect_url'] = 'index.php/pengguna_login_facebook/';
 $config['facebook_permissions']         = array('email');
 $config['facebook_graph_version']       = 'v2.8';
 $config['facebook_auth_on_load']        = TRUE;

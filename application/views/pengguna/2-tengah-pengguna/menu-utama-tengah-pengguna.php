@@ -12,12 +12,13 @@
           </button>
           <!-- Navigation -->
           <div class="android-navigation-container">
-          <?php if($this->session->userdata('oauth_uid') > 0){ ?>
-            <button>OKe</button>
-          <?php } else { ?> 
+          <?php if($this->session->userdata('oauth_uid') == 0){ ?>
             <nav class="android-navigation mdl-navigation">
               <a class="mdl-navigation__link mdl-typography--text-uppercase" href="<?php echo base_url(); ?>index.php/pengguna_login_facebook/">Masuk / Daftar</a>
             </nav>
+          <?php } else { ?> 
+            
+            <button>OKe</button>
           <?php }?>
           </div>
           <span class="android-mobile-title mdl-layout-title">

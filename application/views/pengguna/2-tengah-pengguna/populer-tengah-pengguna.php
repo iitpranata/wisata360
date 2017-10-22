@@ -1,4 +1,9 @@
-<?php print_r($this->session->all_userdata()); ?>
+<?php 
+echo "<pre>";
+print_r($this->session->all_userdata());
+print_r($this->session->userdata('userData'));
+echo "</pre>";
+?>
 
 <div class="android-more-section">
 	<div class="android-card-container mdl-grid">
