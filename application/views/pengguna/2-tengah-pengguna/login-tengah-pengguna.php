@@ -1,3 +1,13 @@
+<?php if($this->session->userdata('userData')['oauth_uid'] > 0){  ?>
+<div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--2-col"></div>
+    <div class="mdl-cell mdl-cell--8-col" style="margin-top:80px;margin-bottom:100px;margin-left:auto;margin-right:auto;text-align:center;">
+        <h2>Terima Kasih</h2>
+        <h6>Sekarang lakukan proses rating dan ulasan untuk pariwisata Indonesia lebih baik!</h6>
+    </div>
+    <div class="mdl-cell mdl-cell--2-col"></div>
+</div>
+<?php }else { ?>
 <div class="mdl-grid">
     <div class="mdl-cell mdl-cell--2-col"></div>
     <div class="mdl-cell mdl-cell--8-col" style="margin-top:80px;margin-bottom:100px;margin-left:auto;margin-right:auto;text-align:center;">
@@ -7,4 +17,5 @@
     </div>
     <div class="mdl-cell mdl-cell--2-col"></div>
 </div>
+<?php } ?>
 

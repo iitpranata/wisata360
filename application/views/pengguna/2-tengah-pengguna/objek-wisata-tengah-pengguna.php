@@ -66,7 +66,7 @@
 							);
 							
 							echo form_input($data);
-							echo form_hidden('id_objekwisata_pengguna', '1');
+							echo form_hidden('id_objekwisata_pengguna', $this->session->userdata('userData')['oauth_uid']);
 						?>
 						<select name="hasil_rating" class="peringkat" required>
 							<option value="1">1</option>
@@ -88,11 +88,13 @@
 					</div>
 					</div>
 				</div>
-				<div class="mdl-card__actions mdl-card--border">
-					<button class="mdl-button mdl-js-button mdl-button--raised">Batal</button>
-					<button class="mdl-button mdl-js-button mdl-button--raised" style="margin-left: 5px;">Komentar</button>
-					<?php echo form_close(); ?>
-				</div>
+				<?php if($this->session->userdata('userData')['oauth_uid'] > 0){ ?>
+					<div class="mdl-card__actions mdl-card--border">
+						<button class="mdl-button mdl-js-button mdl-button--raised">Batal</button>
+						<button class="mdl-button mdl-js-button mdl-button--raised" style="margin-left: 5px;">Komentar</button>
+						<?php echo form_close(); ?>
+					</div>
+				<?php } ?>
 			</div>
 	</div>
 	<div class="mdl-cell mdl-cell--4-col">

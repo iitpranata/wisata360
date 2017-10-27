@@ -12,13 +12,20 @@
           </button>
           <!-- Navigation -->
           <div class="android-navigation-container">
-          <?php if($this->session->userdata('oauth_uid') == 0){ ?>
+          <?php if($this->session->userdata('userData')['oauth_uid'] > 0){ ?>            
+            <button id="demo-menu-lower-right" class="mdl-button mdl-js-button mdl-button--icon" style="margin-right: 20px;">
+                <i class="material-icons">expand_more</i>
+            </button>
+            <b style="color : #7e7777;"><?php echo $this->session->userdata('userData')['first_name']." ".$this->session->userdata('userData')['last_name']; ?></b>
+
+            <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="demo-menu-lower-right">
+                <li class="mdl-menu__item">Profil</li>
+                <li class="mdl-menu__item"><a style="color: black; text-decoration: none;" href="<?php base_url() ?>index.php/pengguna_login_facebook/logout">Keluar</a></li>
+            </ul>
+          <?php } else { ?> 
             <nav class="android-navigation mdl-navigation">
               <a class="mdl-navigation__link mdl-typography--text-uppercase" href="<?php echo base_url(); ?>index.php/pengguna_login_facebook/">Masuk / Daftar</a>
             </nav>
-          <?php } else { ?> 
-            
-            <button>OKe</button>
           <?php }?>
           </div>
           <span class="android-mobile-title mdl-layout-title">
