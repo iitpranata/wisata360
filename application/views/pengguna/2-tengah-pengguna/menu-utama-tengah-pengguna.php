@@ -20,7 +20,7 @@
 
             <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="demo-menu-lower-right">
                 <li class="mdl-menu__item">Profil</li>
-                <li class="mdl-menu__item"><a style="color: black; text-decoration: none;" href="<?php base_url() ?>index.php/pengguna_login_facebook/logout">Keluar</a></li>
+                <li class="mdl-menu__item"><a style="color: black; text-decoration: none;" href="<?php echo base_url() ?>index.php/pengguna_login_facebook/logout">Keluar</a></li>
             </ul>
           <?php } else { ?> 
             <nav class="android-navigation mdl-navigation">

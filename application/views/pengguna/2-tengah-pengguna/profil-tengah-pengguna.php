@@ -6,25 +6,28 @@
     <h2 class="mdl-card__title-text">Akun Anda</h2>
   </div>
   <div class="mdl-card__supporting-text">
-    <form action="#">
+    <center>
+        <img src="<?php echo $this->session->userdata('userData')['picture_url']; ?>" alt="<?php echo $this->session->userdata('userData')['first_name']." ".$this->session->userdata('userData')['last_name']; ?>">
+        <form>
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <input class="mdl-textfield__input" type="text" id="nama_lengkap" value="Iit Pranata">
+            <input class="mdl-textfield__input" type="text" id="nama_lengkap" value="<?php echo $this->session->userdata('userData')['first_name']." ".$this->session->userdata('userData')['last_name']; ?>" disabled>
             <label class="mdl-textfield__label" for="nama_lengkap">Nama Lengkap</label>
         </div>
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <input class="mdl-textfield__input" type="text" id="alamat_email" value="iitpranataip@gmail.com">
+            <input class="mdl-textfield__input" type="text" id="alamat_email" value="<?php echo $this->session->userdata('userData')['email']; ?>" disabled>
             <label class="mdl-textfield__label" for="alamat_email">Alamat Email</label>
         </div>
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <input class="mdl-textfield__input" type="text" id="nomor_telepon" value="+6282371582722">
-            <label class="mdl-textfield__label" for="nomor_telepon">Nomor Telepon</label>
+            <input class="mdl-textfield__input" type="text" id="nomor_telepon" value="<?php  if($this->session->userdata('userData')['gender'] == "male"){ echo "Laki-Laki"; }else{ echo "Perempuan"; } ?>" disabled>
+            <label class="mdl-textfield__label" for="nomor_telepon">Jenis Kelamin</label>
         </div>
-    </form>
+        </form>
+    </center>
   </div>
   <div class="mdl-card__actions mdl-card--border">
-    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-      Simpan
-    </a>
+    <center>
+    <a href="<?php echo $this->session->userdata('userData')['profile_url']; ?>" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--facebook"><i class="fa fa-facebook fa-fw"></i> <?php echo $this->session->userdata('userData')['first_name']." ".$this->session->userdata('userData')['last_name']; ?></a>
+    </center>
   </div>
 </div></div>
   <div class="mdl-cell mdl-cell--3-col"></div>
