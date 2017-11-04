@@ -2,7 +2,7 @@
   <a class="mdl-navigation__link" href="<?php echo base_url()?>index.php/admin/"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">dashboard</i>Dashboard</a>
   <a class="mdl-navigation__link" href="<?php echo base_url()?>index.php/admin/postingan_objek_wisata"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">burst_mode</i>Postingan</a>
   <a class="mdl-navigation__link" href="<?php echo base_url()?>index.php/admin/ulasan"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">comment</i>Ulasan</a>
-  <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">people</i>Pengguna</a>
+  <a class="mdl-navigation__link" href="<?php echo base_url()?>index.php/admin/pengguna"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">people</i>Pengguna</a>
   <hr>
   <a class="mdl-navigation__link" href="<?php echo base_url()?>index.php/admin/rating"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">star</i>Rating</a>
   <a class="mdl-navigation__link" href="<?php echo base_url()?>index.php/admin/sentiment_analysis"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">mode_comment</i>Sentiment Analysis</a>

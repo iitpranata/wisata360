@@ -38,6 +38,12 @@ class Admin_model extends CI_Model{
         return $this->db->get()->result();
     }
 
+    function semua_pengguna(){
+        $this->db->select('*');
+        $this->db->from('objek_wisata__pengguna');
+        return $this->db->get()->result();
+    }
+
     function rating()
     {
         $this->db->select('*');
