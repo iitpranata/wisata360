@@ -8,7 +8,7 @@ class Pengguna_login_facebook extends CI_Controller
 		$this->load->library('facebook');
 		
 		//Load user model
-		$this->load->model('user');
+		$this->load->model('Pengguna_login_model');
     }
 
     public function index()
@@ -32,7 +32,7 @@ class Pengguna_login_facebook extends CI_Controller
             $userData['picture_url'] = $userProfile['picture']['data']['url'];
 			
             // Insert or update user data
-            $userID = $this->user->checkUser($userData);
+            $userID = $this->Pengguna_login_model->checkUser($userData);
 			
 			// Check user data insert or update status
             if(!empty($userID)){
@@ -81,6 +81,6 @@ class Pengguna_login_facebook extends CI_Controller
 		// Remove user data from session
 		$this->session->unset_userdata('userData');
 		// Redirect to login page
-        redirect('pengguna/');
+        redirect(base_url());
     }
 }

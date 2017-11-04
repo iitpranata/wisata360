@@ -25,19 +25,19 @@
 
     <!-- Add to homescreen for Chrome on Android -->
     <meta name="mobile-web-app-capable" content="yes">
-    <link rel="icon" sizes="192x192" href="<?php echo base_url(); ?>assets/belakang/gambar/android-desktop.png">
+    <link rel="icon" sizes="192x192" href="<?php echo base_url(); ?>assets/admin/gambar/android-desktop.png">
 
     <!-- Add to homescreen for Safari on iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="Material Design Lite">
-    <link rel="apple-touch-icon-precomposed" href="<?php echo base_url(); ?>assets/belakang/gambar/ios-desktop.png">
+    <link rel="apple-touch-icon-precomposed" href="<?php echo base_url(); ?>assets/admin/gambar/ios-desktop.png">
 
     <!-- Tile icon for Win8 (144x144 + tile color) -->
-    <meta name="msapplication-TileImage" content="<?php echo base_url(); ?>assets/belakang/gambar/images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileImage" content="<?php echo base_url(); ?>assets/admin/gambar/images/touch/ms-touch-icon-144x144-precomposed.png">
     <meta name="msapplication-TileColor" content="#3372DF">
 
-    <link rel="shortcut icon" href="<?php echo base_url(); ?>assets/belakang/gambar/favicon-.png">
+    <link rel="shortcut icon" href="<?php echo base_url(); ?>assets/admin/gambar/favicon-.png">
 
     <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
     <!--
@@ -47,9 +47,10 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.cyan-light_blue.min.css">
-    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/belakang/css/styles.css">
-    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/belakang/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/belakang/css/getmdl-select.min.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/admin/css/styles.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/admin/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/admin/css/getmdl-select.min.css">
+
     <style>
     #view-source {
       position: fixed;

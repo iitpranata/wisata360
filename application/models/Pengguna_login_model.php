@@ -1,7 +1,7 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-class User extends CI_Model{
+class Pengguna_login_model extends CI_Model{
 	function __construct() {
-		$this->tableName = 'users';
+		$this->tableName = 'objek_wisata__pengguna';
 		$this->primaryKey = 'id';
 	}
 	public function checkUser($data = array()){
