@@ -2,7 +2,7 @@
 class Pengguna_login_model extends CI_Model{
 	function __construct() {
 		$this->tableName = 'objek_wisata__pengguna';
-		$this->primaryKey = 'id';
+		$this->primaryKey = 'oauth_uid';
 	}
 	public function checkUser($data = array()){
 		$this->db->select($this->primaryKey);
@@ -14,8 +14,8 @@ class Pengguna_login_model extends CI_Model{
 		if($prevCheck > 0){
 			$prevResult = $prevQuery->row_array();
 			$data['modified'] = date("Y-m-d H:i:s");
-			$update = $this->db->update($this->tableName,$data,array('id'=>$prevResult['id']));
-			$userID = $prevResult['id'];
+			$update = $this->db->update($this->tableName,$data,array('oauth_uid'=>$prevResult['oauth_uid']));
+			$userID = $prevResult['oauth_uid'];
 		}else{
 			$data['created'] = date("Y-m-d H:i:s");
 			$data['modified'] = date("Y-m-d H:i:s");

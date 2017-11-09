@@ -185,13 +185,17 @@ class Pengguna extends CI_Controller {
 			);
 
 			$id_wisata = $this->uri->segment(3);
+			$id_pengguna = $this->session->userdata('userData')['oauth_uid'];
 			$tengah_pengguna = array(
 				'menu_utama' => 'pengguna/2-tengah-pengguna/menu-utama-tengah-pengguna',
 				'utama_tengah' => 'pengguna/2-tengah-pengguna/objek-wisata-tengah-pengguna',
 
 				'objek_wisata'  => $this->Pengguna_model->objek_wisata($id_wisata),
 				'ulasanrating' => $this->Pengguna_model->ulasanrating($id_wisata),
-				'jumlah_ulasan' => $this->Pengguna_model->jumlah_ulasan($id_wisata)
+				'jumlah_ulasan' => $this->Pengguna_model->jumlah_ulasan($id_wisata),
+				'cek_ulasan' => $this->Pengguna_model->cek_ulasan($id_wisata),
+				'destinasi_lain' => $this->Pengguna_model->destinasi_lain($id_wisata),
+				'sudah_ulasan' => $this->Pengguna_model->sudah_ulasan($id_wisata,$id_pengguna)
 			);
 
 			$bawah_pengguna = array(

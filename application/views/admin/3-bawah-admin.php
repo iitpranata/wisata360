@@ -1,5 +1,5 @@
 <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-<script src="<?php echo base_url() ?>assets/belakang/js/getmdl-select.min.js"></script>
+<script src="<?php echo base_url() ?>assets/admin/js/getmdl-select.min.js"></script>
 <script>
   function readURL(input) {
 

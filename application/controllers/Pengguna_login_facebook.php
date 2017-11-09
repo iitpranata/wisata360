@@ -9,6 +9,7 @@ class Pengguna_login_facebook extends CI_Controller
 		
 		//Load user model
 		$this->load->model('Pengguna_login_model');
+		$this->load->model('Pengguna_model');
     }
 
     public function index()
@@ -62,6 +63,7 @@ class Pengguna_login_facebook extends CI_Controller
 		$tengah_pengguna = array(
 			'menu_utama' => 'pengguna/2-tengah-pengguna/menu-utama-tengah-pengguna',
 			'utama_tengah' => 'pengguna/2-tengah-pengguna/login-tengah-pengguna',
+			'terima_kasih' => $this->Pengguna_model->terima_kasih(),
 			'authUrl' => $this->facebook->login_url()
 		);
 

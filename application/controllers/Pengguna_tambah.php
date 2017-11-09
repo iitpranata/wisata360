@@ -14,11 +14,11 @@ class Pengguna_tambah extends CI_Controller {
     public function objek_wisata()
     {
         $objek_wisata_rating_ulasan = array(
-            'objek_wisata__pengguna_id__objek_wisata__pengguna' => $this->input->post('id_objekwisata_pengguna'),
+            'objek_wisata__pengguna_oauth_uid' => $this->input->post('id_objekwisata_pengguna'),
             'objek_wisata__post_id__objek_wisata__post' => $this->input->post('id_objekwisata_post'),
             'rating__objek_wisata__rating_ulasan' => $this->input->post('hasil_rating'),
             'ulasan__objek_wisata__rating_ulasan' => $this->input->post('hasil_ulasan'),
-            'tanggal__objek_wisata__rating_ulasan' => date('y/m/d'),
+            'tanggal__objek_wisata__rating_ulasan' => date('d-m-y h:i:s'),
         );
         $this->Pengguna_tambah_model->objek_wisata__rating_ulasan($objek_wisata_rating_ulasan);
         
@@ -34,6 +34,6 @@ class Pengguna_tambah extends CI_Controller {
 
         $this->Pengguna_tambah_model->objek_wisata__auto($objek_wisata__auto, $id_objekwisata);
 
-        redirect('index.php/pengguna/objek_wisata/'.$this->input->post('id_objekwisata_post'));
+        redirect('/pengguna/objek_wisata/'.$this->input->post('id_objekwisata_post'));
     }
 }
