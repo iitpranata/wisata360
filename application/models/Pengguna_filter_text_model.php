@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Admin_filter_text_model extends CI_Model{
+class Pengguna_filter_text_model extends CI_Model{
 
 	private $arraykatadasar;
 
