@@ -24,7 +24,7 @@ class Pengguna_tambah extends CI_Controller {
         
         $id_objekwisata = $this->input->post('id_objekwisata_post');
         $objek_wisata__ulasan = $this->input->post('hasil_ulasan');
-        $this->Admin_filter_text_model->objek_wisata_ulasan($id_objekwisata, $objek_wisata__ulasan);
+        $this->Pengguna_filter_text_model->objek_wisata_ulasan($id_objekwisata, $objek_wisata__ulasan);
             
         $id_objekwisata = $this->input->post('id_objekwisata_post');
         $objek_wisata__auto = array(
