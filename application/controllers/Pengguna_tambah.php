@@ -7,7 +7,7 @@ class Pengguna_tambah extends CI_Controller {
 	{
     	parent:: __construct();
            $this->load->model('Pengguna_tambah_model');
-           $this->load->model('Admin_filter_text_model');
+           $this->load->model('Pengguna_filter_text_model');
 
   	}
 

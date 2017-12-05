@@ -1,5 +1,25 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.16/js/dataTables.material.min.js"></script>
 <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 <script src="<?php echo base_url() ?>assets/admin/js/getmdl-select.min.js"></script>
+<script>
+    $(document).ready(function() {
+    $('#example').DataTable( {
+        columnDefs: [
+            {
+                targets: [ 0, 1, 2 ],
+                className: 'mdl-data-table__cell--non-numeric'
+            }
+        ]
+    } );
+} );
+</script>
+<?php 
+    if($this->uri->segment(2) == "tambah_objek_wisata")
+    {
+?>
+
 <script>
   function readURL(input) {
 
@@ -48,5 +68,8 @@
     }
        
 </script>
+<?php
+    }
+?>
   </body>
 </html>

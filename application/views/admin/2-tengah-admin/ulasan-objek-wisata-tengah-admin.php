@@ -1,6 +1,6 @@
 <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
-        <div class="mdl-card__supporting-text">
-            <table class="mdl-data-table mdl-js-data-table">
+        <div class="mdl-card__supporting-text" style="width: 100%;">
+            <table id="example" class="mdl-data-table mdl-js-data-table"  cellspacing="0" width="100%">
                 <thead>
                     <tr>
                         <th class="mdl-data-table__cell--non-numeric">Komentar</th>
@@ -15,7 +15,7 @@
                     <?php foreach ($ulasan_objek_wisata as $row) { ?>
                     <tr>
                         <td class="mdl-data-table__cell--non-numeric" style="white-space:normal;width: 480px;"><?php echo $row->ulasan__objek_wisata__rating_ulasan ?></td>
-                        <td style="color : green;"><?php echo "POSITIF"?></td>
+                        <td class="mdl-data-table__cell--non-numeric" style="color : green;"><?php echo "POSITIF"?></td>
                         <td> 
                             <?php
                                 if($row->rating__objek_wisata__rating_ulasan == 5){
@@ -56,7 +56,7 @@
                             ?>
                         </td>
                         <td><?php echo $row->tanggal__objek_wisata__rating_ulasan ?></td>
-                        <td><?php echo $row->objek_wisata__pengguna_id__objek_wisata__pengguna ?></td>
+                        <td  class="mdl-data-table__cell--non-numeric"><a style="text-decoration:none; color: blue;" href="<?php echo $row->profile_url; ?>"><?php echo $row->first_name." ".$row->last_name;  ?></a></td>
                         <td>
                             <a class="aksi" style="text-decoration: none;" href=""> Hapus</a>
                         </td>

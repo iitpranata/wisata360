@@ -260,7 +260,7 @@
 	  <h6 style="margin-top: 0px; margin-bottom: 0px; padding-top: 10px; padding-left: 10px;"><i class="fa fa-plane" aria-hidden="true"></i> Destinasi wisata lain</h6>
    </div>
    <?php foreach($destinasi_lain as $row){ ?>
-   <div class="mdl-grid">
+   <div class="android-card-container mdl-grid">
 	  <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--2dp">
 		 <div class="mdl-card__media">
 			<?php 

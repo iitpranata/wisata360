@@ -4,24 +4,24 @@
                     <i class="material-icons">add</i> Objek Wisata Baru
             </a>
         </div>
-        <div class="mdl-card__supporting-text">
-            <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable">
+        <div class="mdl-card__supporting-text" style="width: 100%;">
+            <table id="example" class="mdl-data-table mdl-js-data-table" cellspacing="0" width="100%">
                 <thead>
                     <tr>
-                        <th class="mdl-data-table__cell--non-numeric">Objek Wisata</th>
-                        <th>Ulasan</th>
-                        <th>Rating</th>
-                        <th>Tanggal</th>
-                        <th>Kategori</th>
-                        <th></th>
+                        <th class="mdl-data-table__cell--non-numeric" style="width: 500px;">OBJEK WISATA</th>
+                        <th>ULASAN</th>
+                        <th>RATING</th>
+                        <th>TANGGAL</th>
+                        <th>KATEGORI</th>
+                        <th>-</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php foreach ($postingan_data as $row) { ?>
                     <tr>
-                        <td class="mdl-data-table__cell--non-numeric" style="width: 500px;"><?php echo $row->nama__objek_wisata__post ?></td>
+                        <td class="mdl-data-table__cell--non-numeric" ><?php echo $row->nama__objek_wisata__post ?></td>
                         <td style="color : green;"><?php echo "POSITIF"?></td>
-                        <td> 
+                        <td id="tanggal"> 
                             <?php
                                 if($row->floor__objek_wisata__rating == 5){
                                     for($i=1; $i <= 5; $i++){
@@ -59,9 +59,9 @@
                                 echo " (".$row->floor__objek_wisata__rating.")";
                             ?>
                         </td>
-                        <td><?php echo $row->tanggal__objek_wisata__post ?></td>
-                        <td><?php echo $row->kategori__objek_wisata__post ?></td>
-                        <td><a class="aksi" style="text-decoration: none;" target="blank_" href="<?php echo base_url()."index.php/depan/objek_wisata/".$row->id__objek_wisata__post ?>">Lihat </a>|
+                        <td id="tanggal"><?php echo $row->tanggal__objek_wisata__post ?></td>
+                        <td id="tanggal"><?php echo $row->kategori__objek_wisata__post ?></td>
+                        <td><a class="aksi" style="text-decoration: none;" target="blank_" href="<?php echo base_url()."index.php/pengguna/objek_wisata/".$row->id__objek_wisata__post ?>">Lihat </a>|
                             <a class="aksi" style="text-decoration: none;" target="blank_" href="<?php echo base_url()."index.php/admin/edit_objek_wisata/".$row->id__objek_wisata__post?>"> Edit </a>|
                             <a class="aksi" style="text-decoration: none;" href=""> Hapus</a>
                         </td>

@@ -20,21 +20,21 @@
         <div class="mdl-textfield mdl-js-textfield">
             <?php $keterangan=array( 'class'=>'mdl-textfield__input', 'type' => 'text', 'row' => '9', 'id' => 'keterangan_wisata'); echo form_textarea('keterangan_wisata', $row->keterangan__objek_wisata__post, $keterangan); $label_keterangan = array('class' => 'mdl-textfield__label'); echo form_label('Keterangan','keterangan_wisata', $label_keterangan); ?></div>
         <div class="file_input_div" style="margin-left: 0px; margin-right: 0px;">
-                <div class="file_input">
-                <label class="image_input_button mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-js-ripple-effect">
-                    <i class="material-icons">attach_file</i>
-                    <?php $thumbnail = array('id' => 'file_input_file', 'class' => 'none', 'type' => 'file', 'name' => 'thumbnail'); echo form_input($thumbnail) ?>
-                </label>
-                </div>
-                <div id="file_input_text_div" class="mdl-textfield mdl-js-textfield textfield-demo">
-                <input class="file_input_text mdl-textfield__input" placeholder="<?php 
-                    if($row->thumbnail__objek_wisata__post == null)
-                    {echo "Upload Thumbnail";
-                        }else{echo $row->thumbnail__objek_wisata__post;}
-                ?>" type="text" disabled readonly id="file_input_text" />
-                <label class="mdl-textfield__label" for="file_input_text"></label>  
-                </div>
+            <div class="file_input">
+            <label class="image_input_button mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-js-ripple-effect">
+                <i class="material-icons">attach_file</i>
+                <?php $thumbnail = array('id' => 'file_input_file', 'class' => 'none', 'type' => 'file', 'name' => 'thumbnail'); echo form_input($thumbnail) ?>
+            </label>
             </div>
+            <div id="file_input_text_div" class="mdl-textfield mdl-js-textfield textfield-demo">
+            <input class="file_input_text mdl-textfield__input" placeholder="<?php 
+                if($row->thumbnail__objek_wisata__post == null)
+                {echo "Upload Thumbnail";
+                    }else{echo $row->thumbnail__objek_wisata__post;}
+            ?>" type="text" disabled readonly id="file_input_text" />
+            <label class="mdl-textfield__label" for="file_input_text"></label>  
+            </div>
+        </div>
         </div>
     <div class="mdl-cell mdl-cell--6-col">
         <div class="mdl-cell mdl-cell--12-col">

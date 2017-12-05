@@ -22,7 +22,7 @@ class Admin extends CI_Controller
             'svg_utama' => 'admin/2-tengah-admin/svg-utama-tengah-admin.php'
         );
         
-        $this->load->view('admin/1-atas-admin');
+        $this->load->view('admin/1-atas-admin', $tengah_admin);
         $this->load->view('admin/2-tengah-admin', $tengah_admin);
         $this->load->view('admin/3-bawah-admin');
     }
@@ -39,7 +39,7 @@ class Admin extends CI_Controller
             'postingan_data' => $this->Admin_model->semua_postingan()
         );
         
-        $this->load->view('admin/1-atas-admin');
+        $this->load->view('admin/1-atas-admin', $tengah_admin);
         $this->load->view('admin/2-tengah-admin', $tengah_admin);
         $this->load->view('admin/3-bawah-admin');
     }
@@ -54,7 +54,7 @@ class Admin extends CI_Controller
             'halaman_utama' => 'admin/2-tengah-admin/tambah-objekwisata-tengah-admin'
         );
         
-        $this->load->view('admin/1-atas-admin');
+        $this->load->view('admin/1-atas-admin', $tengah_admin);
         $this->load->view('admin/2-tengah-admin', $tengah_admin);
         $this->load->view('admin/3-bawah-admin');
     }
@@ -72,7 +72,7 @@ class Admin extends CI_Controller
             'objek_wisata' => $this->Admin_model->objek_wisata($id_objekwisata)
         );
         
-        $this->load->view('admin/1-atas-admin');
+        $this->load->view('admin/1-atas-admin', $tengah_admin);
         $this->load->view('admin/2-tengah-admin', $tengah_admin);
         $this->load->view('admin/3-bawah-admin');
     }
@@ -89,7 +89,7 @@ class Admin extends CI_Controller
             'ulasan_data' => $this->Admin_model->semua_ulasan()
         );
         
-        $this->load->view('admin/1-atas-admin');
+        $this->load->view('admin/1-atas-admin', $tengah_admin);
         $this->load->view('admin/2-tengah-admin', $tengah_admin);
         $this->load->view('admin/3-bawah-admin');
     }
@@ -108,7 +108,7 @@ class Admin extends CI_Controller
             'nama_objek_wisata' => $this->Admin_model->objek_wisata($id_objekwisata)
         );
         
-        $this->load->view('admin/1-atas-admin');
+        $this->load->view('admin/1-atas-admin', $tengah_admin);
         $this->load->view('admin/2-tengah-admin', $tengah_admin);
         $this->load->view('admin/3-bawah-admin');
     }
@@ -125,7 +125,7 @@ class Admin extends CI_Controller
             'pengguna_data' => $this->Admin_model->semua_pengguna()
         );
         
-        $this->load->view('admin/1-atas-admin');
+        $this->load->view('admin/1-atas-admin', $tengah_admin);
         $this->load->view('admin/2-tengah-admin', $tengah_admin);
         $this->load->view('admin/3-bawah-admin');
     }
@@ -142,7 +142,7 @@ class Admin extends CI_Controller
             'rating_data' => $this->Admin_model->rating()
         );
         
-        $this->load->view('admin/1-atas-admin');
+        $this->load->view('admin/1-atas-admin', $tengah_admin);
         $this->load->view('admin/2-tengah-admin', $tengah_admin);
         $this->load->view('admin/3-bawah-admin');
     }
@@ -161,7 +161,7 @@ class Admin extends CI_Controller
             'nama_objek_wisata' => $this->Admin_model->objek_wisata($id_objekwisata)
         );
         
-        $this->load->view('admin/1-atas-admin');
+        $this->load->view('admin/1-atas-admin', $tengah_admin);
         $this->load->view('admin/2-tengah-admin', $tengah_admin);
         $this->load->view('admin/3-bawah-admin');
     }
@@ -178,7 +178,7 @@ class Admin extends CI_Controller
             'sentiment_analysis' => $this->Admin_model->sentiment_analysis()
         );
         
-        $this->load->view('admin/1-atas-admin');
+        $this->load->view('admin/1-atas-admin', $tengah_admin);
         $this->load->view('admin/2-tengah-admin', $tengah_admin);
         $this->load->view('admin/3-bawah-admin');
     }
@@ -197,7 +197,7 @@ class Admin extends CI_Controller
             'nama_objek_wisata' => $this->Admin_model->objek_wisata($id_objekwisata)
         );
         
-        $this->load->view('admin/1-atas-admin');
+        $this->load->view('admin/1-atas-admin', $tengah_admin);
         $this->load->view('admin/2-tengah-admin', $tengah_admin);
         $this->load->view('admin/3-bawah-admin');
     }

@@ -32,9 +32,9 @@ class Admin_model extends CI_Model{
     function ulasan_objek_wisata($id_objekwisata)
     {
         $this->db->select('*');
-        $this->db->from('objek_wisata__post');
-        $this->db->join('objek_wisata__rating_ulasan', 'objek_wisata__rating_ulasan.objek_wisata__post_id__objek_wisata__post = objek_wisata__post.id__objek_wisata__post', 'left');
-        $this->db->where('id__objek_wisata__post', $id_objekwisata);
+        $this->db->from('objek_wisata__rating_ulasan');
+        $this->db->join('objek_wisata__pengguna', 'objek_wisata__pengguna.oauth_uid = objek_wisata__rating_ulasan.objek_wisata__pengguna_oauth_uid', 'left');
+        $this->db->where('objek_wisata__post_id__objek_wisata__post', $id_objekwisata);
         return $this->db->get()->result();
     }
 
@@ -54,9 +54,9 @@ class Admin_model extends CI_Model{
 
     function rating_objek_wisata($id_objekwisata){
         $this->db->select('*');
-        $this->db->from('objek_wisata__post');
-        $this->db->join('objek_wisata__rating_ulasan', 'objek_wisata__rating_ulasan.objek_wisata__post_id__objek_wisata__post = objek_wisata__post.id__objek_wisata__post', 'left');
-        $this->db->where('id__objek_wisata__post', $id_objekwisata);
+        $this->db->from('objek_wisata__rating_ulasan');
+        $this->db->join('objek_wisata__pengguna', 'objek_wisata__pengguna.oauth_uid = objek_wisata__rating_ulasan.objek_wisata__pengguna_oauth_uid', 'left');
+        $this->db->where('objek_wisata__post_id__objek_wisata__post', $id_objekwisata);
         return $this->db->get()->result();
     }
 

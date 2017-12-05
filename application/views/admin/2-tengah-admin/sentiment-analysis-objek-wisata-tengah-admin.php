@@ -1,13 +1,12 @@
 <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
-        <div class="mdl-card__supporting-text">
+        <div class="mdl-card__supporting-text" style="width: 100%;">
             <h4>1. Preprocessing</h4>
-            <table class="mdl-data-table mdl-js-data-table">
+            <table id="example" class="mdl-data-table mdl-js-data-table" cellspacing="0" width="100%">
                 <thead>
                     <tr>
-                        
-                        <th class="mdl-data-table__cell--non-numeric">Tokenization</th>
-                        <th class="mdl-data-table__cell--non-numeric">Filter</th>
-                        <th class="mdl-data-table__cell--non-numeric">Stemmed</th>
+                        <th class="mdl-data-table__cell--non-numeric">TOKENIZATION</th>
+                        <th class="mdl-data-table__cell--non-numeric">STOPWARDS</th>
+                        <th class="mdl-data-table__cell--non-numeric">STEAMMING</th>
                     </tr>
                 </thead>
                 <tbody>

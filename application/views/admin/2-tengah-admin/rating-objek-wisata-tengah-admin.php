@@ -1,19 +1,19 @@
 <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
-        <div class="mdl-card__supporting-text">
-            <table class="mdl-data-table mdl-js-data-table">
+        <div class="mdl-card__supporting-text"  style="width: 100%;">
+            <table id="example" class="mdl-data-table mdl-js-data-table" cellspacing="0" width="100%">
                 <thead>
                     <tr>
-                        <th>Tanggal</tg>
-                        <th class="mdl-data-table__cell--non-numeric">Nama</th>
-                        <th>Rating</th>
+                        <th>TANGGAL</tg>
+                        <th class="mdl-data-table__cell--non-numeric"  style="width: 480px;">NAMA</th>
+                        <th  style="width: 480px;">RATING</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php foreach ($rating_objek_wisata as $row) { ?>
                     <tr>
                         <td> <?php echo $row->tanggal__objek_wisata__rating_ulasan ?></td>
-                        <td class="mdl-data-table__cell--non-numeric" style="white-space:normal;width: 480px;"><?php echo $row->objek_wisata__pengguna_id__objek_wisata__pengguna ?></td>
-                        <td style="width: 480px;"> 
+                        <td class="mdl-data-table__cell--non-numeric"><a style="text-decoration:none; color:blue;" href="<?php echo $row->profile_url; ?>"><?php echo $row->first_name." ".$row->last_name;  ?></a></td>
+                        <td> 
                             <?php
                                 if($row->rating__objek_wisata__rating_ulasan == 5){
                                     for($i=1; $i <= 5; $i++){
