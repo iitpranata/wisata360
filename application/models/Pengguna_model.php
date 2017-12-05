@@ -76,7 +76,6 @@ class Pengguna_model extends CI_Model{
 
 	function cek_ulasan($id_wisata)
 	{
-		$this->db->select('*');
 		$this->db->from('objek_wisata__rating_ulasan');
 		$this->db->where('objek_wisata__rating_ulasan.objek_wisata__post_id__objek_wisata__post', $id_wisata);
 		$query = $this->db->get();
