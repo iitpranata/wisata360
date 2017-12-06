@@ -6,10 +6,11 @@ class Pengguna extends CI_Controller {
 	public function __construct ()
 	{
 		parent:: __construct();
-   		$this->load->model('Pengguna_model');
+		   $this->load->model('Pengguna_model');
+		   $this->load->model('Collaborative_filter');
 
   	}
-
+	  
 	public function index()
 	{	
 		$atas_pengguna = array(
@@ -18,6 +19,8 @@ class Pengguna extends CI_Controller {
 			'meta_utama' => 'pengguna/1-atas-pengguna/meta-utama-atas-pengguna',
 			'css_utama' => 'pengguna/1-atas-pengguna/css-utama-atas-pengguna'
 		);
+		$a = $this->Pengguna_model->cf();
+		$b = $this->session->userdata('userData')['first_name']." ".$this->session->userdata('userData')['last_name'];
 		
 		$tengah_pengguna = array(
 			'menu_utama' => 'pengguna/2-tengah-pengguna/menu-utama-tengah-pengguna',
@@ -28,6 +31,8 @@ class Pengguna extends CI_Controller {
 
 			'populer_data' => $this->Pengguna_model->populer(),
 			'rating_data' => $this->Pengguna_model->rating(),
+			'cf_asli' => $this->Pengguna_model->cf(),
+			'cf' => $this->Collaborative_filter->getRecommendations($a, $b)
 		);
 
 		$bawah_pengguna = array(

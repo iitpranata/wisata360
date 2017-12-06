@@ -1,7 +1,10 @@
 <?php 
 echo "<pre>";
 print_r($this->session->all_userdata());
-echo $this->session->userdata('userData')['oauth_uid'];
+echo "<br>";
+print_r($cf_asli);
+echo "<br>";
+print_r($cf);
 echo "</pre>";
 ?>
 
