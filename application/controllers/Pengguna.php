@@ -21,7 +21,11 @@ class Pengguna extends CI_Controller {
 		);
 		$a = $this->Pengguna_model->cf();
 		$b = $this->session->userdata('userData')['first_name']." ".$this->session->userdata('userData')['last_name'];
-		
+		if(isset($b) == TRUE){ 
+			$c = "Iit Pranata"; 
+		}else{
+			$c = $this->session->userdata('userData')['first_name']." ".$this->session->userdata('userData')['last_name'];
+		}
 		$tengah_pengguna = array(
 			'menu_utama' => 'pengguna/2-tengah-pengguna/menu-utama-tengah-pengguna',
 			'utama_tengah' => 'pengguna/2-tengah-pengguna/utama-tengah-pengguna',
@@ -32,7 +36,7 @@ class Pengguna extends CI_Controller {
 			'populer_data' => $this->Pengguna_model->populer(),
 			'rating_data' => $this->Pengguna_model->rating(),
 			'cf_asli' => $this->Pengguna_model->cf(),
-			'cf' => $this->Collaborative_filter->getRecommendations($a, $b)
+			'cf' => $this->Collaborative_filter->getRecommendations($a, $c),
 		);
 
 		$bawah_pengguna = array(

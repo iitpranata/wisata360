@@ -11,7 +11,7 @@
   	          </div>
           </div>
           <div class="mdl-tabs__tab-bar" style="background-color : #f3f3f3;">
-              <a href="#tab1" class="mdl-tabs__tab is-active">POPULER</a>
+              <a href="#tab1" class="mdl-tabs__tab is-active">REKOMENDASI</a>
               <a href="#tab2" class="mdl-tabs__tab">RATING</a>
               <a href="#tab3" class="mdl-tabs__tab">ULASAN</a>
           </div>

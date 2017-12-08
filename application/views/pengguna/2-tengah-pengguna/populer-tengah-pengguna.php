@@ -1,16 +1,19 @@
 <?php 
 echo "<pre>";
-print_r($this->session->all_userdata());
+//print_r($this->session->all_userdata());
 echo "<br>";
-print_r($cf_asli);
+//print_r($cf_asli);
 echo "<br>";
-print_r($cf);
+//print_r(($cf));
+//echo $cf["Pantai Panjang"];
 echo "</pre>";
+
+
 ?>
 
 <div class="android-more-section">
 	<div class="android-card-container mdl-grid">
-    <?php foreach ($populer_data as $row) {?>
+    <?php foreach ($cf as $row) {?>
 		<div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--4dp">
       <div class="mdl-card__media">
         <?php 
@@ -81,11 +84,4 @@ echo "</pre>";
     </div>
     <?php  }   ?>
   </div>
-	<div class="mdl-grid">
-		<div class="mdl-layout-spacer"></div>
-		<div class="mdl-cell mdl-cell--2-col">
-			<button class="mdl-button mdl-js-button mdl-button--raised"> <i class="material-icons">chevron_right</i> Selanjutnya</button>
-		</div>
-		<div class="mdl-layout-spacer"></div>
-	</div>
 </div>

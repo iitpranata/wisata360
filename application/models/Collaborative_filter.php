@@ -100,14 +100,25 @@ class Collaborative_filter extends CI_Model {
             }
         }
 
-        foreach($total as $key=>$value)
-        {
-            $ranks[$key] = $value / $simSums[$key];
-        }
-        
-    array_multisort($ranks, SORT_DESC);    
-    return $ranks;
+            foreach($total as $key=>$value)
+            {
+                $ranks[] = preg_replace('/\D/', '', $key);
+                //echo $ranks[$key] = $value / $simSums[$key];
+                //array_multisort($ranks, SORT_DESC); 
+            }
+
+            //echo "'".implode(" ",$ranks)."',";
+
+            $this->db->from('objek_wisata__post');
+            $this->db->join('objek_wisata__rating', 'objek_wisata__rating.objek_wisata__post_id__objek_wisata__post = objek_wisata__post.id__objek_wisata__post', 'left');
+            $this->db->where_in('id__objek_wisata__post', $ranks);
+            $q = $this->db->get()->result();
+
+            // foreach($q->result() as $row){
+            //     $data[] = $row->thumbnail__objek_wisata__post;
+            // }
+           
+    return $q;
         
     }
-   
 }
