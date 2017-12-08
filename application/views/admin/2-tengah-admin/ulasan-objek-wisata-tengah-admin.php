@@ -3,11 +3,11 @@
             <table id="example" class="mdl-data-table mdl-js-data-table"  cellspacing="0" width="100%">
                 <thead>
                     <tr>
-                        <th class="mdl-data-table__cell--non-numeric">Komentar</th>
-                        <th>Ulasan</th>
-                        <th>Rating</th>
-                        <th>Tanggal</th>
-                        <th>Pengguna</th>
+                        <th class="mdl-data-table__cell--non-numeric">KOMENTAR</th>
+                        <th>ULASAN</th>
+                        <th>RATING</th>
+                        <th>TANGGAL</th>
+                        <th>PENGGUNA</th>
                         <th></th>
                     </tr>
                 </thead>

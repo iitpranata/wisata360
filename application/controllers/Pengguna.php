@@ -59,9 +59,11 @@ class Pengguna extends CI_Controller {
 			'css_profil' => 'pengguna/1-atas-pengguna/css-profil-atas-pengguna'
 		);
 
+		$id_pengguna = $this->session->userdata('userData')['oauth_uid'];
 		$tengah_pengguna = array(
 			'menu_utama' => 'pengguna/2-tengah-pengguna/menu-utama-tengah-pengguna',
-			'utama_tengah' => 'pengguna/2-tengah-pengguna/profil-tengah-pengguna'
+			'utama_tengah' => 'pengguna/2-tengah-pengguna/profil-tengah-pengguna',
+			'profil_data' => $this->Pengguna_model->profil($id_pengguna)
 		);
 
 		$bawah_pengguna = array(

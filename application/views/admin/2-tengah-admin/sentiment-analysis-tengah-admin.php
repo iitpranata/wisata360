@@ -3,9 +3,9 @@
         <table id="example" class="mdl-data-table mdl-js-data-table" cellspacing="0" width="100%">
             <thead>
                 <tr>
-                    <th class="mdl-data-table__cell--non-numeric"  style="width: 697px;">Objek Wisata</th>
-                    <th class="mdl-data-table__cell--non-numeric">Nilai</th>
-                    <th class="mdl-data-table__cell--non-numeric">Ulasan</th>
+                    <th class="mdl-data-table__cell--non-numeric"  style="width: 697px;">OBJEK WISATA</th>
+                    <th class="mdl-data-table__cell--non-numeric">NILAI</th>
+                    <th class="mdl-data-table__cell--non-numeric">ULASAN</th>
                 </tr>
             </thead>
             <tbody>

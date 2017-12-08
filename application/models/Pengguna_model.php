@@ -6,6 +6,14 @@ class Pengguna_model extends CI_Model{
 		
 	}
 
+	function profil($id_pengguna){
+		$this->db
+		->select('*')
+		->from('objek_wisata__pengguna')
+		->where('oauth_uid', $id_pengguna);
+		return $this->db->get()->result();
+	}
+
 	function populer()
     {
 		$this->db->select('*');

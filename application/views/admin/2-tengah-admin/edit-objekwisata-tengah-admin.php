@@ -49,7 +49,7 @@
             <label for="fotovr" class="custom-file-upload"> <i class="fa fa-cloud-upload"></i> Upload Wisata</label>
             <?php $foto=array( 'type'=>'file', 'id' => 'fotovr', 'name' => 'fotovr'); echo form_input($foto); ?></div>
         <div class="mdl-cell mdl-cell--12-col">
-            <img id="foto360" src="<?php echo base_url()."assets/depan/gambar/" . $row->foto_virtual_reality__objek_wisata__post?>" alt="" style='width:100%;' border="0"/>
+            <img id="foto360" src="<?php echo base_url()."assets/pengguna/gambar/" . $row->foto_virtual_reality__objek_wisata__post?>" alt="" style='width:100%;' border="0"/>
         </div>
     </div>
     <?php } ?>

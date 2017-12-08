@@ -26,7 +26,7 @@ class Pengguna_login_facebook extends CI_Controller
             $userData['oauth_uid'] = $userProfile['id'];
             $userData['first_name'] = $userProfile['first_name'];
             $userData['last_name'] = $userProfile['last_name'];
-            $userData['email'] = $userProfile['email'];
+            //$userData['email'] = $userProfile['email'];
             $userData['gender'] = $userProfile['gender'];
             $userData['locale'] = $userProfile['locale'];
             $userData['profile_url'] = 'https://www.facebook.com/'.$userProfile['id'];
