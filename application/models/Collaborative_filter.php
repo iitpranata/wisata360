@@ -107,13 +107,16 @@ class Collaborative_filter extends CI_Model {
                 //array_multisort($ranks, SORT_DESC); 
             }
 
-            //echo "'".implode(" ",$ranks)."',";
-
-            $this->db->from('objek_wisata__post');
-            $this->db->join('objek_wisata__rating', 'objek_wisata__rating.objek_wisata__post_id__objek_wisata__post = objek_wisata__post.id__objek_wisata__post', 'left');
-            $this->db->where_in('id__objek_wisata__post', $ranks);
-            $q = $this->db->get()->result();
-
+            
+            if(implode(" ",$ranks) == ""){
+                $q = "";
+            }else{
+                $this->db->from('objek_wisata__post');
+                $this->db->join('objek_wisata__rating', 'objek_wisata__rating.objek_wisata__post_id__objek_wisata__post = objek_wisata__post.id__objek_wisata__post', 'left');
+                $this->db->where_in('id__objek_wisata__post', $ranks);
+                $this->db->limit(3);
+                $q = $this->db->get()->result();
+            }
             // foreach($q->result() as $row){
             //     $data[] = $row->thumbnail__objek_wisata__post;
             // }

@@ -60,7 +60,13 @@
               ?>
             </div>
           </div>
-          <i class="fa fa-comment" aria-hidden="true" style="padding-left: 10px;"></i> 27 Ulasan
+					<i class="fa fa-comment" aria-hidden="true" style="padding-left: 10px;"></i> 
+					<?php 
+						$this->db->where('objek_wisata__post_id__objek_wisata__post',$row->id__objek_wisata__post);
+						$this->db->from('objek_wisata__rating_ulasan');
+						echo $this->db->count_all_results(); 
+					?>
+					Ulasan
         </span>
       </div>
 			<div class="mdl-card__actions"> <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="<?php echo base_url()."index.php/pengguna/objek_wisata/".$row->id__objek_wisata__post ?>" data-upgraded=",MaterialButton">

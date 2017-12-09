@@ -82,13 +82,18 @@ class Pengguna_model extends CI_Model{
 		return $this->db->get()->result();
 	}
 
-	function cek_ulasan($id_wisata)
+	function cek_ulasan($id_wisata,$id_pengguna)
 	{
 		$this->db->from('objek_wisata__rating_ulasan');
+		$this->db->where('objek_wisata__rating_ulasan.objek_wisata__pengguna_oauth_uid', $id_pengguna);
 		$this->db->where('objek_wisata__rating_ulasan.objek_wisata__post_id__objek_wisata__post', $id_wisata);
 		$query = $this->db->get();
 		$ret = $query->row();
-		return $ret->objek_wisata__pengguna_oauth_uid;
+		if(isset($ret->objek_wisata__pengguna_oauth_uid) == ""){
+			return $a = "0";
+		}else{
+			return $ret->objek_wisata__pengguna_oauth_uid;
+		}
 	}
 	
 	function jumlah_ulasan($id_wisata)

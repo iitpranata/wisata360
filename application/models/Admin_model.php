@@ -77,4 +77,19 @@ class Admin_model extends CI_Model{
         $this->db->where('id__objek_wisata__post', $id_objekwisata);
         return $this->db->get()->result();
     }
+
+    function jumlah_postingan(){
+        $query = $this->db->query('SELECT * FROM objek_wisata__post');
+        return $query->num_rows();
+    }
+
+    function jumlah_ulasan(){
+        $query = $this->db->query('SELECT * FROM objek_wisata__rating_ulasan');
+        return $query->num_rows();
+    }
+
+    function jumlah_pengguna(){
+        $query = $this->db->query('SELECT * FROM objek_wisata__pengguna');
+        return $query->num_rows();
+    }
 }

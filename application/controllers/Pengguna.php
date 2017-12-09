@@ -20,11 +20,10 @@ class Pengguna extends CI_Controller {
 			'css_utama' => 'pengguna/1-atas-pengguna/css-utama-atas-pengguna'
 		);
 		$a = $this->Pengguna_model->cf();
-		$b = $this->session->userdata('userData')['first_name']." ".$this->session->userdata('userData')['last_name'];
-		if(isset($b) == TRUE){ 
-			$c = "Iit Pranata"; 
+		if(isset($this->session->userdata('userData')['oauth_uid']) == ""){ 
+			$b = "Aldi Sasri"; 
 		}else{
-			$c = $this->session->userdata('userData')['first_name']." ".$this->session->userdata('userData')['last_name'];
+			$b = $this->session->userdata('userData')['first_name']." ".$this->session->userdata('userData')['last_name'];
 		}
 		$tengah_pengguna = array(
 			'menu_utama' => 'pengguna/2-tengah-pengguna/menu-utama-tengah-pengguna',
@@ -36,7 +35,7 @@ class Pengguna extends CI_Controller {
 			'populer_data' => $this->Pengguna_model->populer(),
 			'rating_data' => $this->Pengguna_model->rating(),
 			'cf_asli' => $this->Pengguna_model->cf(),
-			'cf' => $this->Collaborative_filter->getRecommendations($a, $c),
+			'cf' => $this->Collaborative_filter->getRecommendations($a, $b)
 		);
 
 		$bawah_pengguna = array(
@@ -204,7 +203,7 @@ class Pengguna extends CI_Controller {
 				'objek_wisata'  => $this->Pengguna_model->objek_wisata($id_wisata),
 				'ulasanrating' => $this->Pengguna_model->ulasanrating($id_wisata),
 				'jumlah_ulasan' => $this->Pengguna_model->jumlah_ulasan($id_wisata),
-				'cek_ulasan' => $this->Pengguna_model->cek_ulasan($id_wisata),
+				'cek_ulasan' => $this->Pengguna_model->cek_ulasan($id_wisata,$id_pengguna),
 				'destinasi_lain' => $this->Pengguna_model->destinasi_lain($id_wisata),
 				'sudah_ulasan' => $this->Pengguna_model->sudah_ulasan($id_wisata,$id_pengguna)
 			);
