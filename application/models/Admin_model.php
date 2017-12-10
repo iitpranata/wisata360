@@ -92,4 +92,24 @@ class Admin_model extends CI_Model{
         $query = $this->db->query('SELECT * FROM objek_wisata__pengguna');
         return $query->num_rows();
     }
+
+    function populer()
+    {
+		$this->db->select('*');
+		$this->db->from('objek_wisata__post');
+		$this->db->join('objek_wisata__rating', 'objek_wisata__rating.objek_wisata__post_id__objek_wisata__post = objek_wisata__post.id__objek_wisata__post', 'left');
+		$this->db->order_by('floor__objek_wisata__rating', 'DESC');
+		$this->db->limit(1);
+		return $this->db->get()->result();
+    }
+
+    function tidak_populer()
+    {
+		$this->db->select('*');
+		$this->db->from('objek_wisata__post');
+		$this->db->join('objek_wisata__rating', 'objek_wisata__rating.objek_wisata__post_id__objek_wisata__post = objek_wisata__post.id__objek_wisata__post', 'left');
+		$this->db->order_by('floor__objek_wisata__rating', 'ASC');
+		$this->db->limit(1);
+		return $this->db->get()->result();
+    }
 }

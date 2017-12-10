@@ -50,7 +50,6 @@
                                 echo '<i class="material-icons" style="font-size : 10px;">star_border</i>';
                             }
                         }
-                        echo " (".$row->floor__objek_wisata__rating.")";
                     ?>
                         </td>
                     <?php } ?>

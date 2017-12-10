@@ -15,6 +15,7 @@
                         <td style="color : green;"><?php echo "POSITIF"?></td>
                         <td> 
                             <?php
+                                echo " (".$row->floor__objek_wisata__rating.") ";
                                 if($row->floor__objek_wisata__rating == 5){
                                     for($i=1; $i <= 5; $i++){
                                         echo '<i class="material-icons" style="font-size : 10px;">star</i>';
@@ -48,7 +49,7 @@
                                         echo '<i class="material-icons" style="font-size : 10px;">star_border</i>';
                                     }
                                 }
-                                echo " (".$row->floor__objek_wisata__rating.")";
+                                
                             ?>
                         </td>
                         <?php } ?>

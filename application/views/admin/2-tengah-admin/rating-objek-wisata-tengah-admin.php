@@ -15,6 +15,7 @@
                         <td class="mdl-data-table__cell--non-numeric"><a style="text-decoration:none; color:blue;" href="<?php echo $row->profile_url; ?>"><?php echo $row->first_name." ".$row->last_name;  ?></a></td>
                         <td> 
                             <?php
+                                echo " (".$row->rating__objek_wisata__rating_ulasan.") ";
                                 if($row->rating__objek_wisata__rating_ulasan == 5){
                                     for($i=1; $i <= 5; $i++){
                                         echo '<i class="material-icons" style="font-size : 10px;">star</i>';
@@ -49,7 +50,7 @@
                                     }
                                 }
 
-                                echo " (".$row->rating__objek_wisata__rating_ulasan.")";
+                                
                             ?>
                         </td>
                         <?php } ?>

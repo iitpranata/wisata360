@@ -22,6 +22,8 @@ class Admin extends CI_Controller
             'jumlah_postingan' => $this->Admin_model->jumlah_postingan(),
             'jumlah_ulasan' => $this->Admin_model->jumlah_ulasan(),
             'jumlah_pengguna' => $this->Admin_model->jumlah_pengguna(),
+            'populer' => $this->Admin_model->populer(),
+            'tidak_populer' => $this->Admin_model->tidak_populer(),
         );
         
         $this->load->view('admin/1-atas-admin', $tengah_admin);

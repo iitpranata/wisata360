@@ -19,7 +19,8 @@ class Pengguna_model extends CI_Model{
 		$this->db->select('*');
 		$this->db->from('objek_wisata__post');
 		$this->db->join('objek_wisata__rating', 'objek_wisata__rating.objek_wisata__post_id__objek_wisata__post = objek_wisata__post.id__objek_wisata__post', 'left');
-        $this->db->limit(6);
+		$this->db->order_by('floor__objek_wisata__rating', 'DESC');
+		$this->db->limit(6);
 		return $this->db->get()->result();
     }
 
@@ -28,7 +29,8 @@ class Pengguna_model extends CI_Model{
 		$this->db->select('*');
 		$this->db->from('objek_wisata__post');
 		$this->db->join('objek_wisata__rating', 'objek_wisata__rating.objek_wisata__post_id__objek_wisata__post = objek_wisata__post.id__objek_wisata__post', 'left');
-        $this->db->limit(6);
+		$this->db->order_by('floor__objek_wisata__rating', 'DESC');
+		$this->db->limit(6);
 		return $this->db->get()->result();
 	}
 	
