@@ -5,17 +5,17 @@
           if($this->uri->segment(2) == "ulasan_objek_wisata")
           {
             foreach ($nama_objek_wisata as $row) {
-              echo $nama_halaman.$row->nama__objek_wisata__post;
+              echo $nama_halaman."- ".$row->nama__objek_wisata__post;
             }
-          }if ($this->uri->segment(2) == "rating_objek_wisata") {
+          }elseif($this->uri->segment(2) == "rating_objek_wisata") {
             foreach ($nama_objek_wisata as $row) {
-              echo $nama_halaman.$row->nama__objek_wisata__post;
+              echo $nama_halaman."- ".$row->nama__objek_wisata__post;
             }
-          }if ($this->uri->segment(2) == "sentiment_analysis_objek_wisata") {
+          }elseif($this->uri->segment(2) == "sentiment_analysis_objek_wisata") {
             foreach ($nama_objek_wisata as $row) {
-              echo $nama_halaman.$row->nama__objek_wisata__post;
+              echo $nama_halaman."- ".$row->nama__objek_wisata__post;
             }
-          }else {
+          }else{
             echo $nama_halaman; 
           }
           ?></span>

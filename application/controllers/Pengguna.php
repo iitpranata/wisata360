@@ -109,10 +109,11 @@ class Pengguna extends CI_Controller {
 			'css_utama' => 'pengguna/1-atas-pengguna/css-utama-atas-pengguna',
 			'css_profil' => 'pengguna/1-atas-pengguna/css-profil-atas-pengguna'
 		);
-
+		
 		$tengah_pengguna = array(
 			'menu_utama' => 'pengguna/2-tengah-pengguna/menu-utama-tengah-pengguna',
-			'utama_tengah' => 'pengguna/2-tengah-pengguna/populer-semua-tengah-pengguna'
+			'utama_tengah' => 'pengguna/2-tengah-pengguna/populer-semua-tengah-pengguna',
+			'populer_semua' => $this->Pengguna_model->populer_semua()
 		);
 
 		$bawah_pengguna = array(

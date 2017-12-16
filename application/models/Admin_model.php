@@ -112,4 +112,18 @@ class Admin_model extends CI_Model{
 		$this->db->limit(1);
 		return $this->db->get()->result();
     }
+
+    function cf()
+    {
+		$data = array();
+		
+		$this->db->from('objek_wisata__rating_ulasan');
+		$this->db->join('objek_wisata__pengguna', 'objek_wisata__pengguna.oauth_uid = objek_wisata__rating_ulasan.objek_wisata__pengguna_oauth_uid');
+		$this->db->join('objek_wisata__post', 'objek_wisata__post.id__objek_wisata__post = objek_wisata__rating_ulasan.	objek_wisata__post_id__objek_wisata__post');
+		$q = $this->db->get();
+		foreach($q->result() as $row){
+			$data[$row->first_name." ".$row->last_name][$row->nama__objek_wisata__post." ".$row->objek_wisata__post_id__objek_wisata__post] = $row->rating__objek_wisata__rating_ulasan;
+		}
+		return $data;
+	}
 }

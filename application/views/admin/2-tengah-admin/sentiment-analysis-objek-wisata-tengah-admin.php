@@ -1,6 +1,6 @@
 <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
         <div class="mdl-card__supporting-text" style="width: 100%;">
-            <h4>1. Preprocessing</h4>
+            <h4>Preprocessing</h4>
             <table id="example" class="mdl-data-table mdl-js-data-table" cellspacing="0" width="100%">
                 <thead>
                     <tr>
@@ -20,7 +20,7 @@
                     </tr>
                 </tbody>
             </table>
-            <h4>2. Pembobotan</h4>
+            <h4>Pembobotan</h4>
             
         </div>
     </div>

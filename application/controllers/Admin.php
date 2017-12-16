@@ -8,6 +8,7 @@ class Admin extends CI_Controller
     {
         parent::__construct();
         $this->load->model('Admin_model');
+        $this->load->model('Collaborative_filter');
         
     }
     
@@ -136,14 +137,25 @@ class Admin extends CI_Controller
     
     public function rating()
     {
+        $a = $this->Admin_model->cf();
+		if($this->input->get('nama_pengguna') == ""){ 
+			$b = "Aldi Sasri"; 
+		}else{
+            $b = $this->input->get('nama_pengguna');
+            //echo $this->input->post('nama_pengguna');
+		}
         $tengah_admin = array(
-            'nama_halaman' => 'Rating',
+            'nama_halaman' => 'Rating (Collaborative Filter)',
             'header_utama' => 'admin/2-tengah-admin/header-utama-tengah-admin',
             'header_menu' => 'admin/2-tengah-admin/header-menu-tengah-admin',
             'nav_utama' => 'admin/2-tengah-admin/nav-menu-tengah-admin.php',
             'halaman_utama' => 'admin/2-tengah-admin/rating-tengah-admin',
             
-            'rating_data' => $this->Admin_model->rating()
+            'rating_data' => $this->Admin_model->rating(),
+            'cf_asli' => $this->Admin_model->cf(),
+            //'cf_dd' => $this->Collaborative_filter->transformPreferences($a),
+            'cf_sama' => $this->Collaborative_filter->matchItems($a, $b),
+			'cf' => $this->Collaborative_filter->getRecommendations($a, $b)
         );
         
         $this->load->view('admin/1-atas-admin', $tengah_admin);

@@ -174,7 +174,7 @@
 	<div class="mdl-grid">
 		<div class="mdl-layout-spacer"></div>
 		<div class="mdl-cell mdl-cell--2-col">
-			<button class="mdl-button mdl-js-button mdl-button--raised"> <i class="material-icons">chevron_right</i> Selanjutnya</button>
+			<a href="<?php echo base_url().'index.php/pengguna/populer/' ?>" target="_blank" class="mdl-button mdl-js-button mdl-button--raised"> <i class="material-icons">chevron_right</i> Selanjutnya</a>
 		</div>
 		<div class="mdl-layout-spacer"></div>
 	</div>

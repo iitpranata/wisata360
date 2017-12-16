@@ -36,4 +36,5 @@ class Pengguna_tambah extends CI_Controller {
 
         redirect('/pengguna/objek_wisata/'.$this->input->post('id_objekwisata_post'));
     }
+    
 }
