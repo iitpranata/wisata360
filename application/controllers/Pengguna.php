@@ -7,7 +7,7 @@ class Pengguna extends CI_Controller {
 	{
 		parent:: __construct();
 		   $this->load->model('Pengguna_model');
-		   $this->load->model('Collaborative_filter');
+		   $this->load->model('Collaborative_filter_model');
 
   	}
 	  
@@ -35,7 +35,7 @@ class Pengguna extends CI_Controller {
 			'populer_data' => $this->Pengguna_model->populer(),
 			'rating_data' => $this->Pengguna_model->rating(),
 			'cf_asli' => $this->Pengguna_model->cf(),
-			'cf' => $this->Collaborative_filter->getRecommendations($a, $b)
+			'cf' => $this->Collaborative_filter_model->getRecommendations($a, $b)
 		);
 
 		$bawah_pengguna = array(

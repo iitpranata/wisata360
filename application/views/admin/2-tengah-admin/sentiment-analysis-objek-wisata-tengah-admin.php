@@ -21,6 +21,12 @@
                 </tbody>
             </table>
             <h4>Pembobotan</h4>
-            
+            <?php
+            echo "<pre>"; 
+            print_r($tf_data);
+            echo "<br>";
+            echo $tf; 
+            echo "</pre>";
+            ?>
         </div>
     </div>

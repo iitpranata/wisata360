@@ -125,5 +125,18 @@ class Admin_model extends CI_Model{
 			$data[$row->first_name." ".$row->last_name][$row->nama__objek_wisata__post." ".$row->objek_wisata__post_id__objek_wisata__post] = $row->rating__objek_wisata__rating_ulasan;
 		}
 		return $data;
-	}
+    }
+    
+    function tf_idf(){
+        $data = array();
+
+        $this->db->from('objek_wisata__ulasan');
+        $this->db->where('objek_wisata__post_id__objek_wisata__post', $this->uri->slash_segment(3));
+        $q = $this->db->get();
+		foreach($q->result() as $row){
+			$data[] = $row->stemmed__objek_wisata__ulasan;
+		}
+		return $data;
+
+    }
 }

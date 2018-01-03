@@ -8,7 +8,8 @@ class Admin extends CI_Controller
     {
         parent::__construct();
         $this->load->model('Admin_model');
-        $this->load->model('Collaborative_filter');
+        $this->load->model('Collaborative_filter_model');
+        $this->load->model('Tf_idf_model');
         
     }
     
@@ -18,7 +19,7 @@ class Admin extends CI_Controller
             'nama_halaman' => 'Dashboard',
             'header_utama' => 'admin/2-tengah-admin/header-utama-tengah-admin',
             'header_menu' => 'admin/2-tengah-admin/header-menu-tengah-admin',
-            'nav_utama' => 'admin/2-tengah-admin/nav-menu-tengah-admin.php',
+            'nav_utama' => 'admin/2-tengah-admin/nav-menu-tengah-admin',
             'halaman_utama' => 'admin/2-tengah-admin/dashboard-utama-tengah-admin',
             'jumlah_postingan' => $this->Admin_model->jumlah_postingan(),
             'jumlah_ulasan' => $this->Admin_model->jumlah_ulasan(),
@@ -38,7 +39,7 @@ class Admin extends CI_Controller
             'nama_halaman' => 'Semua Postingan',
             'header_utama' => 'admin/2-tengah-admin/header-utama-tengah-admin',
             'header_menu' => 'admin/2-tengah-admin/header-menu-tengah-admin',
-            'nav_utama' => 'admin/2-tengah-admin/nav-menu-tengah-admin.php',
+            'nav_utama' => 'admin/2-tengah-admin/nav-menu-tengah-admin',
             'halaman_utama' => 'admin/2-tengah-admin/postingan-objek-wisata-tengah-admin',
             
             'postingan_data' => $this->Admin_model->semua_postingan()
@@ -148,14 +149,14 @@ class Admin extends CI_Controller
             'nama_halaman' => 'Rating (Collaborative Filter)',
             'header_utama' => 'admin/2-tengah-admin/header-utama-tengah-admin',
             'header_menu' => 'admin/2-tengah-admin/header-menu-tengah-admin',
-            'nav_utama' => 'admin/2-tengah-admin/nav-menu-tengah-admin.php',
+            'nav_utama' => 'admin/2-tengah-admin/nav-menu-tengah-admin',
             'halaman_utama' => 'admin/2-tengah-admin/rating-tengah-admin',
             
             'rating_data' => $this->Admin_model->rating(),
             'cf_asli' => $this->Admin_model->cf(),
-            //'cf_dd' => $this->Collaborative_filter->transformPreferences($a),
-            'cf_sama' => $this->Collaborative_filter->matchItems($a, $b),
-			'cf' => $this->Collaborative_filter->getRecommendations($a, $b)
+            //'cf_dd' => $this->Collaborative_filter_model->transformPreferences($a),
+            'cf_sama' => $this->Collaborative_filter_model->matchItems($a, $b),
+			'cf' => $this->Collaborative_filter_model->getRecommendations($a, $b)
         );
         
         $this->load->view('admin/1-atas-admin', $tengah_admin);
@@ -202,6 +203,7 @@ class Admin extends CI_Controller
     public function sentiment_analysis_objek_wisata()
     {
         $id_objekwisata = $this->uri->segment(3);
+        $ulasan = $this->Admin_model->tf_idf();
         $tengah_admin   = array(
             'nama_halaman' => 'Sentiment Analysis ',
             'header_utama' => 'admin/2-tengah-admin/header-utama-tengah-admin',
@@ -210,7 +212,9 @@ class Admin extends CI_Controller
             'halaman_utama' => 'admin/2-tengah-admin/sentiment-analysis-objek-wisata-tengah-admin',
             
             'sentiment_analysis' => $this->Admin_model->sentiment_analysis_objek_wisata($id_objekwisata),
-            'nama_objek_wisata' => $this->Admin_model->objek_wisata($id_objekwisata)
+            'nama_objek_wisata' => $this->Admin_model->objek_wisata($id_objekwisata),
+            'tf_data' => $this->Admin_model->tf_idf(),
+            'tf' => $this->Tf_idf_model->Termfrequency($ulasan)
         );
         
         $this->load->view('admin/1-atas-admin', $tengah_admin);

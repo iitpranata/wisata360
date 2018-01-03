@@ -11,13 +11,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ::-moz-selection { background-color: #E13300; color: white; }
 
 body {
-	background-color: #fff;
+	/* background-color: #fff; */
+	/* background: url('../assets/pengguna/gambar/404_Not_Found.png') center / cover;
 	margin: 40px;
 	font: 13px/20px normal Helvetica, Arial, sans-serif;
-	color: #4F5155;
+	color: #4F5155; */
+	background: url(../assets/pengguna/gambar/404_Not_Found.png) no-repeat center center fixed; 
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
 }
 
-a {
+/* a {
 	color: #003399;
 	background-color: transparent;
 	font-weight: normal;
@@ -52,13 +58,16 @@ code {
 
 p {
 	margin: 12px 15px 12px 15px;
-}
+} */
+
+
+
 </style>
 </head>
 <body>
-	<div id="container">
-		<h1><?php echo $heading; ?></h1>
-		<?php echo $message; ?>
-	</div>
+	<!-- <div id="container">
+		<h1><?php //echo $heading; ?></h1>
+		<?php //echo $message; ?>
+	</div> -->
 </body>
 </html>
