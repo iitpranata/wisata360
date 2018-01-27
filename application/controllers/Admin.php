@@ -9,7 +9,7 @@ class Admin extends CI_Controller
         parent::__construct();
         $this->load->model('Admin_model');
         $this->load->model('Collaborative_filter_model');
-        $this->load->model('Tf_idf_model');
+        $this->load->model('K_nearest_neighbor_model');
         
     }
     
@@ -139,7 +139,7 @@ class Admin extends CI_Controller
     public function rating()
     {
         $a = $this->Admin_model->cf();
-		if($this->input->get('nama_pengguna') == ""){ 
+		if($this->input->get('nama_pengguna') == " "){ 
 			$b = "Aldi Sasri"; 
 		}else{
             $b = $this->input->get('nama_pengguna');
@@ -186,7 +186,7 @@ class Admin extends CI_Controller
     public function sentiment_analysis()
     {
         $tengah_admin = array(
-            'nama_halaman' => 'Sentiment Analysis',
+            'nama_halaman' => 'Sentiment Analysis (K-Nearest Neighbors)',
             'header_utama' => 'admin/2-tengah-admin/header-utama-tengah-admin',
             'header_menu' => 'admin/2-tengah-admin/header-menu-tengah-admin',
             'nav_utama' => 'admin/2-tengah-admin/nav-menu-tengah-admin',
@@ -214,7 +214,7 @@ class Admin extends CI_Controller
             'sentiment_analysis' => $this->Admin_model->sentiment_analysis_objek_wisata($id_objekwisata),
             'nama_objek_wisata' => $this->Admin_model->objek_wisata($id_objekwisata),
             'tf_data' => $this->Admin_model->tf_idf(),
-            'tf' => $this->Tf_idf_model->Termfrequency($ulasan)
+            'tf' => $this->K_nearest_neighbor_model->Termfrequency($ulasan)
         );
         
         $this->load->view('admin/1-atas-admin', $tengah_admin);

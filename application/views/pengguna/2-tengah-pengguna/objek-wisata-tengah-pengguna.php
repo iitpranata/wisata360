@@ -126,7 +126,15 @@
 					 }
 					 echo form_input($data);
 					 echo form_hidden('id_objekwisata_pengguna', $this->session->userdata('userData')['oauth_uid']);
+					 echo form_hidden('ulasan_wisata__auto', $cek_ulasans);
 					 ?>
+					 <?php
+						$query = $this->db->query("SELECT `ulasan_objek_wisata__ulasan`, COUNT(`ulasan_objek_wisata__ulasan`) AS `value_occurrence` FROM `objek_wisata__ulasan` WHERE `objek_wisata__post_id__objek_wisata__post` = $row->id__objek_wisata__post GROUP BY `ulasan_objek_wisata__ulasan` ORDER BY `value_occurrence` DESC LIMIT 1");
+						$rows = $query->row();
+						$nilai_ulasan_wisata = $rows->value_occurrence;
+
+						echo form_hidden('nilai_ulasan_wisata__auto', $nilai_ulasan_wisata);
+                     ?>
 				  <select name="hasil_rating" class="peringkat">
 					 <option value="1">1</option>
 					 <option value="2">2</option>

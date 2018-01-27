@@ -4,7 +4,6 @@
                 <thead>
                     <tr>
                         <th class="mdl-data-table__cell--non-numeric">KOMENTAR</th>
-                        <th>ULASAN</th>
                         <th>RATING</th>
                         <th>TANGGAL</th>
                         <th>PENGGUNA</th>
@@ -15,7 +14,6 @@
                     <?php foreach ($ulasan_objek_wisata as $row) { ?>
                     <tr>
                         <td class="mdl-data-table__cell--non-numeric" style="white-space:normal;width: 480px;"><?php echo $row->ulasan__objek_wisata__rating_ulasan ?></td>
-                        <td class="mdl-data-table__cell--non-numeric" style="color : green;"><?php echo "POSITIF"?></td>
                         <td> 
                             <?php
                                 echo " (".$row->rating__objek_wisata__rating_ulasan.") ";

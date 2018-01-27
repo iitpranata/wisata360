@@ -21,4 +21,15 @@ class Pengguna_tambah_model extends CI_Model{
 		$this->db->where('objek_wisata__post_id__objek_wisata__post', $id_objekwisata);
 		$this->db->update('objek_wisata__rating', $objek_wisata__auto);
 	}
+
+	function ulasan_wisata__auto($id_objekwisata, $ulasan_wisata__auto){
+		$query = $this->db->query("SELECT `id__objek_wisata__ulasan` FROM `objek_wisata__ulasan` WHERE `objek_wisata__post_id__objek_wisata__post`=$id_objekwisata ORDER BY `id__objek_wisata__ulasan` DESC LIMIT 1");
+		foreach($query->result() as $row){
+			$data = $row->id__objek_wisata__ulasan;
+		}
+
+		$this->db->where('id__objek_wisata__ulasan', $data);
+		$this->db->where('objek_wisata__post_id__objek_wisata__post', $id_objekwisata);
+		$this->db->update('objek_wisata__ulasan', $ulasan_wisata__auto);
+	}
 }

@@ -20,7 +20,15 @@
                     <?php foreach ($postingan_data as $row) { ?>
                     <tr>
                         <td class="mdl-data-table__cell--non-numeric" ><?php echo $row->nama__objek_wisata__post ?></td>
-                        <td style="color : green;"><?php echo "POSITIF"?></td>
+                        <?php
+                            $query = $this->db->query("SELECT `ulasan_objek_wisata__ulasan`, COUNT(`ulasan_objek_wisata__ulasan`) AS `value_occurrence` FROM `objek_wisata__ulasan` WHERE `objek_wisata__post_id__objek_wisata__post` = $row->id__objek_wisata__post GROUP BY `ulasan_objek_wisata__ulasan` ORDER BY `value_occurrence` DESC LIMIT 1");
+                            $rows = $query->row();
+                            if($rows->ulasan_objek_wisata__ulasan == "1"){
+                                echo '<td style="color : green;">POSITIF</td>';
+                            }else{
+                                echo '<td style="color : red;">NEGATIF</td>';
+                            }
+                        ?>
                         <td id="tanggal"> 
                             <?php
                                 echo " (".$row->floor__objek_wisata__rating.") ";

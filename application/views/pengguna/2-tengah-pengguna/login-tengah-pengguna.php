@@ -85,6 +85,7 @@
         <h2>Masuk</h2>
         <h6>Masuk sekarang untuk kemudahan proses rating dan ulasan untuk pariwisata Indonesia lebih baik!</h6>
         <a href="<?php echo $authUrl; ?>" title="Masuk Dengan Facebook" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--facebook"><i class="fa fa-facebook fa-fw"></i> Masuk Dengan Facebook</a>
+        <h6 style="margin-top: 10px;">Tidak punya akun? <a class="mdl-navigation__link mdl-typography--text-uppercase" href="<?php echo $authUrl; ?>">BUAT AKUN</a></h6>
      </div>
      <div class="mdl-cell mdl-cell--2-col"></div>
   </div>

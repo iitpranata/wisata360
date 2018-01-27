@@ -7,11 +7,21 @@
 // print_r(($cf));
 // echo "</pre>";
 ?>
-<?php if(isset($this->session->userdata('userData')['oauth_uid']) == ""){ echo "";}else{?>
-<div class="android-more-section" style="padding-bottom: 0px;">
-<h6 style="margin-top: 0px; margin-bottom: 0px;">Direkomendasikan :</h6>
+<?php if($this->session->userdata('userData')['oauth_uid'] == TRUE){?>  
+
+<h5 style="text-align: center;margin-bottom: 0px;">
+	Terima Kasih
+</h5>
+<h6 style="margin-top: 0px;text-align: center;">
+Telah Meluangkan Waktu Untuk Memberikan Rating dan Ulasan Wisata Kota Bengkulu.
+</h6>
+
+<?php }elseif($this->session->userdata('userData')['oauth_uid'] == " "){  ?>
+
+	<div class="android-more-section" style="padding-bottom: 0px;">
+	<h6 style="margin-top: 0px; margin-bottom: 0px; padding-left: 10px;">Direkomendasikan :</h6>
 	<div class="android-card-container mdl-grid">
-    <?php foreach ($cf as $row) {?>
+    <?php error_reporting(0); foreach ($cf as $row) {?>
 		<div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--4dp">
       <div class="mdl-card__media">
         <?php 
@@ -90,7 +100,8 @@
 	</div>
 	<hr>
 </div>
-<?php } ?>
+
+<?php }else{ } ?>
 
 <div class="android-more-section">
 	<div class="android-card-container mdl-grid">

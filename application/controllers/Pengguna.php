@@ -8,6 +8,7 @@ class Pengguna extends CI_Controller {
 		parent:: __construct();
 		   $this->load->model('Pengguna_model');
 		   $this->load->model('Collaborative_filter_model');
+		   $this->load->model('K_nearest_neighbor_model');
 
   	}
 	  
@@ -34,6 +35,7 @@ class Pengguna extends CI_Controller {
 
 			'populer_data' => $this->Pengguna_model->populer(),
 			'rating_data' => $this->Pengguna_model->rating(),
+			'ulasan_data' => $this->Pengguna_model->ulasan(),
 			'cf_asli' => $this->Pengguna_model->cf(),
 			'cf' => $this->Collaborative_filter_model->getRecommendations($a, $b)
 		);
@@ -138,7 +140,8 @@ class Pengguna extends CI_Controller {
 
 		$tengah_pengguna = array(
 			'menu_utama' => 'pengguna/2-tengah-pengguna/menu-utama-tengah-pengguna',
-			'utama_tengah' => 'pengguna/2-tengah-pengguna/rating-semua-tengah-pengguna'
+			'utama_tengah' => 'pengguna/2-tengah-pengguna/rating-semua-tengah-pengguna',
+			'rating_semua' => $this->Pengguna_model->rating_semua()
 		);
 
 		$bawah_pengguna = array(
@@ -163,7 +166,8 @@ class Pengguna extends CI_Controller {
 
 		$tengah_pengguna = array(
 			'menu_utama' => 'pengguna/2-tengah-pengguna/menu-utama-tengah-pengguna',
-			'utama_tengah' => 'pengguna/2-tengah-pengguna/ulasan-semua-tengah-pengguna'
+			'utama_tengah' => 'pengguna/2-tengah-pengguna/ulasan-semua-tengah-pengguna',
+			'ulasan_semua' => $this->Pengguna_model->ulasan_semua()
 		);
 
 		$bawah_pengguna = array(
@@ -206,7 +210,8 @@ class Pengguna extends CI_Controller {
 				'jumlah_ulasan' => $this->Pengguna_model->jumlah_ulasan($id_wisata),
 				'cek_ulasan' => $this->Pengguna_model->cek_ulasan($id_wisata,$id_pengguna),
 				'destinasi_lain' => $this->Pengguna_model->destinasi_lain($id_wisata),
-				'sudah_ulasan' => $this->Pengguna_model->sudah_ulasan($id_wisata,$id_pengguna)
+				'sudah_ulasan' => $this->Pengguna_model->sudah_ulasan($id_wisata,$id_pengguna),
+				'cek_ulasans' => $this->K_nearest_neighbor_model->Termfrequency_pengguna()
 			);
 
 			$bawah_pengguna = array(

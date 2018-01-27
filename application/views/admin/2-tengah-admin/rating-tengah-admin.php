@@ -112,7 +112,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach ($cf as $row) { ?>
+                    <?php error_reporting(0); foreach ($cf as $row) { ?>
                     <tr>
                         <td class="mdl-data-table__cell--non-numeric" ><a class="aksi" style="text-decoration: none;" target="blank_" href="<?php echo base_url()."index.php/pengguna/objek_wisata/".$row->id__objek_wisata__post ?>"><?php echo $row->nama__objek_wisata__post ?></a></td>
                         <td id="tanggal"> 

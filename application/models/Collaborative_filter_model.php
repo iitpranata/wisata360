@@ -8,7 +8,7 @@ class Collaborative_filter_model extends CI_Model {
     {
         $similar = array();
         $sum = 0;
-    
+        error_reporting(0);
         foreach($preferences[$person1] as $key=>$value)
         {
             if(array_key_exists($key, $preferences[$person2]))

@@ -1,12 +1,12 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Belakang_edit extends CI_Controller {
+class Admin_edit extends CI_Controller {
 
     public function __construct ()
 	{
     	parent:: __construct();
-   		$this->load->model('Belakang_edit_model');
+   		$this->load->model('Admin_edit_model');
 
   	}
 
@@ -34,8 +34,18 @@ class Belakang_edit extends CI_Controller {
             );
 
             $id_objekwisata = $this->input->post('id_objekwisata');
-            $this->Belakang_edit_model->objek_wisata($id_objekwisata, $objek_wisata);
+            $this->Admin_edit_model->objek_wisata($id_objekwisata, $objek_wisata);
             redirect('index.php/belakang/tambah_objek_wisata');
         }
+    }
+
+    public function ulasan(){
+        $ulasan = array(
+            'ulasan_objek_wisata__ulasan' => $this->input->post('ulasan')
+        );
+
+        $id_ulasan = $this->input->post('id_ulasan');
+        $this->Admin_edit_model->ulasan($id_ulasan, $ulasan);
+        redirect('admin/sentiment_analysis');
     }
 }

@@ -16,22 +16,14 @@ class Pengguna_model extends CI_Model{
 
 	function populer()
     {
-		$this->db->select('*');
-		$this->db->from('objek_wisata__post');
-		$this->db->join('objek_wisata__rating', 'objek_wisata__rating.objek_wisata__post_id__objek_wisata__post = objek_wisata__post.id__objek_wisata__post', 'left');
-		$this->db->order_by('floor__objek_wisata__rating', 'DESC');
-		$this->db->limit(6);
-		return $this->db->get()->result();
+		$query = $this->db->query("SELECT *, `floor__objek_wisata__rating` + `ulasan__objek_wisata__rating` AS `populer` FROM objek_wisata__post INNER JOIN objek_wisata__rating ON objek_wisata__post.id__objek_wisata__post = objek_wisata__rating.objek_wisata__post_id__objek_wisata__post ORDER BY `populer` DESC LIMIT 6");
+		return $query->result();
 	}
 	
 	function populer_semua()
     {
-		$this->db->select('*');
-		$this->db->from('objek_wisata__post');
-		$this->db->join('objek_wisata__rating', 'objek_wisata__rating.objek_wisata__post_id__objek_wisata__post = objek_wisata__post.id__objek_wisata__post', 'left');
-		$this->db->order_by('floor__objek_wisata__rating', 'DESC');
-		$this->db->limit(6);
-		return $this->db->get()->result();
+		$query = $this->db->query("SELECT *, `floor__objek_wisata__rating` + `ulasan__objek_wisata__rating` AS `populer` FROM objek_wisata__post INNER JOIN objek_wisata__rating ON objek_wisata__post.id__objek_wisata__post = objek_wisata__rating.objek_wisata__post_id__objek_wisata__post ORDER BY `populer` DESC LIMIT 6");
+		return $query->result();
     }
 
 	function rating()
@@ -43,7 +35,35 @@ class Pengguna_model extends CI_Model{
 		$this->db->limit(6);
 		return $this->db->get()->result();
 	}
-	
+
+	function rating_semua()
+    {
+		$this->db->select('*');
+		$this->db->from('objek_wisata__post');
+		$this->db->join('objek_wisata__rating', 'objek_wisata__rating.objek_wisata__post_id__objek_wisata__post = objek_wisata__post.id__objek_wisata__post', 'left');
+		$this->db->order_by('floor__objek_wisata__rating', 'DESC');
+		return $this->db->get()->result();
+	}
+
+	function ulasan()
+    {
+		$this->db->select('*');
+		$this->db->from('objek_wisata__post');
+		$this->db->join('objek_wisata__rating', 'objek_wisata__rating.objek_wisata__post_id__objek_wisata__post = objek_wisata__post.id__objek_wisata__post', 'left');
+		$this->db->order_by('ulasan__objek_wisata__rating', 'DESC');
+		$this->db->limit(6);
+		return $this->db->get()->result();
+	}
+
+	function ulasan_semua()
+    {
+		$this->db->select('*');
+		$this->db->from('objek_wisata__post');
+		$this->db->join('objek_wisata__rating', 'objek_wisata__rating.objek_wisata__post_id__objek_wisata__post = objek_wisata__post.id__objek_wisata__post', 'left');
+		$this->db->order_by('ulasan__objek_wisata__rating', 'DESC');
+		return $this->db->get()->result();
+	}
+
 	function terima_kasih()
 	{
 		$this->db->select('*');
@@ -128,6 +148,14 @@ class Pengguna_model extends CI_Model{
 			$data[$row->first_name." ".$row->last_name][$row->nama__objek_wisata__post." ".$row->objek_wisata__post_id__objek_wisata__post] = $row->rating__objek_wisata__rating_ulasan;
 		}
 		return $data;
+	}
+
+	function nilai_ulasan(){
+		$query = $this->db->query("SELECT `ulasan_objek_wisata__ulasan`, COUNT(`ulasan_objek_wisata__ulasan`) AS `value_occurrence` FROM `objek_wisata__ulasan` WHERE `objek_wisata__post_id__objek_wisata__post` = 1 GROUP BY `ulasan_objek_wisata__ulasan` ORDER BY `value_occurrence` DESC LIMIT 1");
+		foreach($query->result() as $row){
+			$data = $row->ulasan_objek_wisata__ulasan;
+		}
+		
 	}
 	
 
