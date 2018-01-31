@@ -95,22 +95,14 @@ class Admin_model extends CI_Model{
 
     function populer()
     {
-		$this->db->select('*');
-		$this->db->from('objek_wisata__post');
-		$this->db->join('objek_wisata__rating', 'objek_wisata__rating.objek_wisata__post_id__objek_wisata__post = objek_wisata__post.id__objek_wisata__post', 'left');
-		$this->db->order_by('floor__objek_wisata__rating', 'DESC');
-		$this->db->limit(1);
-		return $this->db->get()->result();
+		$query = $this->db->query("SELECT *, `floor__objek_wisata__rating` + `ulasan__objek_wisata__rating` AS `populer` FROM objek_wisata__post INNER JOIN objek_wisata__rating ON objek_wisata__post.id__objek_wisata__post = objek_wisata__rating.objek_wisata__post_id__objek_wisata__post ORDER BY `populer` DESC LIMIT 1");
+		return $query->result();
     }
 
     function tidak_populer()
     {
-		$this->db->select('*');
-		$this->db->from('objek_wisata__post');
-		$this->db->join('objek_wisata__rating', 'objek_wisata__rating.objek_wisata__post_id__objek_wisata__post = objek_wisata__post.id__objek_wisata__post', 'left');
-		$this->db->order_by('floor__objek_wisata__rating', 'ASC');
-		$this->db->limit(1);
-		return $this->db->get()->result();
+		$query = $this->db->query("SELECT *, `floor__objek_wisata__rating` + `ulasan__objek_wisata__rating` AS `populer` FROM objek_wisata__post INNER JOIN objek_wisata__rating ON objek_wisata__post.id__objek_wisata__post = objek_wisata__rating.objek_wisata__post_id__objek_wisata__post ORDER BY `populer` ASC LIMIT 1");
+		return $query->result();
     }
 
     function cf()

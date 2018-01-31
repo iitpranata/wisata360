@@ -563,6 +563,12 @@ a img{
     height: 350px;
   }
 
+  #searchform {
+    margin-left: 9px;
+    margin-right: 9px;
+    width: 323px;
+  }
+
   .android-slogan {
     font-size: 26px;
     margin: 0 16px;

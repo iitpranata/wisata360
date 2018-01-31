@@ -87,9 +87,11 @@ class Pengguna extends CI_Controller {
 			'css_profil' => 'pengguna/1-atas-pengguna/css-profil-atas-pengguna'
 		);
 
+		$keyword = $this->input->post('keyword');
 		$tengah_pengguna = array(
 			'menu_utama' => 'pengguna/2-tengah-pengguna/menu-utama-tengah-pengguna',
-			'utama_tengah' => 'pengguna/2-tengah-pengguna/pencarian-tengah-pengguna'
+			'utama_tengah' => 'pengguna/2-tengah-pengguna/pencarian-tengah-pengguna',
+			'objek_wisata' => $this->Pengguna_model->pencarian_wisata($keyword)
 		);
 
 		$bawah_pengguna = array(

@@ -4,12 +4,14 @@
         </div>
 
         <div class="mdl-tabs mdl-js-tabs">
+          <?php echo form_open('pengguna/pencarian') ?>
           <div class="mdl-tabs__tab-bar mdl-layout--large-screen-only" style="height: 60px; padding-top: 10px; background-color : #ececec;">
-              <div class="field" id="searchform">
-                <input type="text" id="searchterm" placeholder="Cari destinasi tujuan anda?" />
-                <button type="button" id="search">CARI</button>
-  	          </div>
+            <div class="field" id="searchform">
+              <input type="text" id="searchterm" name="keyword" placeholder="Cari destinasi tujuan anda?" />
+              <button type="submit" id="search">CARI</button>
+  	        </div>
           </div>
+          <?php echo form_close() ?>
           <div class="mdl-tabs__tab-bar" style="background-color : #f3f3f3;">
               <a href="#tab1" class="mdl-tabs__tab is-active">POPULER</a>
               <a href="#tab2" class="mdl-tabs__tab">RATING</a>

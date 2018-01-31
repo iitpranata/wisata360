@@ -1,39 +1,18 @@
-        <footer class="android-footer mdl-mega-footer">
-          <div class="mdl-mega-footer--middle-section mdl-grid">
-
-            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-mega-footer--drop-down-section">
-                <h1 class="mdl-mega-footer--heading">Wisata360</h1>
-                <hr class="mdl-layout--small-screen-only">
-                <ul class="mdl-mega-footer--link-list">
-                    <li><a href="#">Tentang</a></li>
-                    <li><a href="#">Tanya Jawab</a></li>
-                    <li><a href="#">Syarat & Ketentuan</a></li>
-                    <li><a href="#">Hubungi</a></li>
-                </ul>
-            </div>
-
-            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-mega-footer--drop-down-section">
-                <h1 class="mdl-mega-footer--heading">Destinasi</h1>
-                <hr class="mdl-layout--small-screen-only">
-                <ul class="mdl-mega-footer--link-list">
-                    <li><a href="#">Populer</a></li>
-                    <li><a href="#">Rating</a></li>
-                    <li><a href="#">Ulasan</a></li>
-                </ul>
-            </div>
-
-            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-mega-footer--drop-down-section">
-                <h1 class="mdl-mega-footer--heading">Find Us</h1>
-                <hr class="mdl-layout--small-screen-only">
-                <ul class="mdl-mega-footer--link-list">
-                    <li><i class="fa fa-phone-square" aria-hidden="true"></i><a href="#"> +62 823 7158 2722</a></li>
-                    <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="#"> info@wisata.com</a></li>
-                    <li><i class="fa fa-facebook-square" aria-hidden="true"></i><a href="#"> Wisata 360</a></li>
-                    <li><i class="fa fa-twitter-square" aria-hidden="true"></i><a href="#"> @wisata360</a></li>
-                    <li><i class="fa fa-google-plus-square" aria-hidden="true"></i><a href="#"> @wisata360</a></li>
-                </ul>
-            </div>
-
-          </div>
-          
-        </footer>
+<footer class="android-footer mdl-mega-footer">
+   <div class="mdl-mega-footer--middle-section">
+      <p class="mdl-typography--font-light">Hak Cipta © 2017 - <?php echo date("Y"); ?> | Wisata 360 Kota Bengkulu</p>
+   </div>
+   <div class="mdl-mega-footer--bottom-section">
+      <a class="android-link android-link-menu mdl-typography--font-light" id="developers-dropdown">
+      Team Kito Developer
+      <i class="material-icons">arrow_drop_up</i>
+      </a>
+      <ul class="mdl-menu mdl-js-menu mdl-menu--top-left mdl-js-ripple-effect" for="developers-dropdown">
+         <li class="mdl-menu__item"><a class="mdl-navigation__link" href="https://www.facebook.com/teamkito/" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i> Team Kito </a></li>
+         <li class="mdl-menu__item"><a class="mdl-navigation__link" href="https://www.instagram.com/teamkito/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i> @teamkito </a></li>
+         <li class="mdl-menu__item"><a class="mdl-navigation__link" href="https://twitter.com/teamkitodev" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i> @teamkitodev </a></li>
+         <li class="mdl-menu__item"><a class="mdl-navigation__link" href="mailto:teamkitodeveloper@gmail.com" target="_top"><i class="fa fa-envelope" aria-hidden="true"></i> teamkitodeveloper@gmail.com </a></li>
+         <li class="mdl-menu__item"><a class="mdl-navigation__link" href="tel:+6282371582722" target="_top"><i class="fa fa-phone" aria-hidden="true"></i> +62-8237-158-2722 </a></li>
+      </ul>
+   </div>
+</footer>

@@ -1,6 +1,5 @@
 <div class="demo-charts mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
         <div class="mdl-card__supporting-text" style="width: 100%;">
-            <h4>Preprocessing</h4>
             <table id="example" class="mdl-data-table mdl-js-data-table" cellspacing="0" width="100%">
                 <thead>
                     <tr>

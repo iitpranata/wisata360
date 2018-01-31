@@ -72,7 +72,7 @@
             Ulasan
           </span>
         </div>
-        <div class="mdl-card__actions"> <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="<?php echo base_url()."index.php/pengguna/objek_wisata/".$row->id__objek_wisata__post ?>" data-upgraded=",MaterialButton">
+        <div class="mdl-card__actions"> <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="<?php echo base_url()."pengguna/objek_wisata/".$row->id__objek_wisata__post ?>" data-upgraded=",MaterialButton">
             Selengkapnya
             <i class="material-icons">chevron_right</i>
           </a>
@@ -80,14 +80,4 @@
       </div>
       <?php  }   ?>
   </div>
-  <div class="mdl-grid">
-      <div class="mdl-layout-spacer"></div>
-      <div class="mdl-cell mdl-cell--2-col">
-        <button type="button" class="mdl-button mdl-js-button mdl-button--raised" onclick="loadmore()" value="loadmore" >
-          <i class="material-icons">chevron_right</i> 
-          Selanjutnya
-        </button>
-      </div>
-      <div class="mdl-layout-spacer"></div>
-    </div>
 </div> 

@@ -341,9 +341,9 @@ class K_nearest_neighbor_model extends CI_Model {
         //  }    
         // echo "<hr>";
         // echo "<strong>Invers Document Frequency</strong><br>";
-        // for($h=0;$h<count($result);$h++){
-        //     print_r($idf[$h]);
-        // }
+        for($h=0;$h<count($result);$h++){
+            return $idf[$h]; 
+        }
         // echo "<hr>";
         // echo "<strong>Skalar</strong><br>";
         // // print_r($dokumen);
@@ -362,7 +362,6 @@ class K_nearest_neighbor_model extends CI_Model {
         // echo $itu;
         
         // echo "</pre>";
-        return $itu;
         
     }
 }

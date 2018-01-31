@@ -81,7 +81,7 @@ Telah Meluangkan Waktu Untuk Memberikan Rating dan Ulasan Wisata Kota Bengkulu.
 					Ulasan
         </span>
       </div>
-			<div class="mdl-card__actions"> <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="<?php echo base_url()."index.php/pengguna/objek_wisata/".$row->id__objek_wisata__post ?>" data-upgraded=",MaterialButton">
+			<div class="mdl-card__actions"> <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="<?php echo base_url()."pengguna/objek_wisata/".$row->id__objek_wisata__post ?>" data-upgraded=",MaterialButton">
           Selengkapnya
           <i class="material-icons">chevron_right</i>
         </a>
@@ -165,7 +165,7 @@ Telah Meluangkan Waktu Untuk Memberikan Rating dan Ulasan Wisata Kota Bengkulu.
 					Ulasan
         </span>
       </div>
-			<div class="mdl-card__actions"> <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="<?php echo base_url()."index.php/pengguna/objek_wisata/".$row->id__objek_wisata__post ?>" data-upgraded=",MaterialButton">
+			<div class="mdl-card__actions"> <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="<?php echo base_url()."pengguna/objek_wisata/".$row->id__objek_wisata__post ?>" data-upgraded=",MaterialButton">
           Selengkapnya
           <i class="material-icons">chevron_right</i>
         </a>
@@ -176,7 +176,7 @@ Telah Meluangkan Waktu Untuk Memberikan Rating dan Ulasan Wisata Kota Bengkulu.
 	<div class="mdl-grid">
 		<div class="mdl-layout-spacer"></div>
 		<div class="mdl-cell mdl-cell--2-col">
-		<a href="<?php echo base_url().'index.php/pengguna/ulasan/' ?>" target="_blank" class="mdl-button mdl-js-button mdl-button--raised"> <i class="material-icons">chevron_right</i> Selanjutnya</a>
+		<a href="<?php echo base_url().'pengguna/ulasan/' ?>" target="_blank" class="mdl-button mdl-js-button mdl-button--raised"> <i class="material-icons">chevron_right</i> Selanjutnya</a>
 		</div>
 		<div class="mdl-layout-spacer"></div>
 	</div>

@@ -107,7 +107,7 @@
    </div>
    <?php }else{ ?> 
    <?php if($this->session->userdata('userData')['oauth_uid'] == FALSE){ ?>
-   <a style="color: black; text-decoration: none;" href="<?php echo base_url() ?>index.php/pengguna_login_facebook/">
+   <a style="color: black; text-decoration: none;" href="<?php echo base_url() ?>pengguna_login_facebook/">
 	  <?php } ?>
 	  <div class="demo-card-wide mdl-card mdl-shadow--2dp" style="width: 100%; margin-top: 10px;">
 		 <div class="mdl-card__supporting-text" style="padding-bottom: 0px;">
@@ -179,7 +179,8 @@
 	  var uluru = {lat: <?php echo $row->lat_map__objek_wisata__post ?>, lng: <?php echo $row->lng_map__objek_wisata__post ?>};
 	  var map = new google.maps.Map(document.getElementById('map'), {
 	   zoom: 17,
-	   center: uluru
+	   center: uluru,
+	   gestureHandling: 'cooperative'
 	  });
 	  var marker = new google.maps.Marker({
 	   position: uluru,
@@ -205,7 +206,9 @@
 		?> 
 	  Ulasan 
    </div>
+   <div style="overflow-y: scroll; height: 1390px;">
    <?php foreach ($ulasanrating as $row) { ?>
+   
    <div class="mdl-grid">
 	  <div class="mdl-card__supporting-text mdl-shadow--2dp" style="width: 100%;">
 		 <div class="mdl-grid" style="padding-bottom: 0px;">
@@ -262,11 +265,7 @@
 	  </div>
    </div>
    <?php } ?>
-   <div class="mdl-card__actions" align="center">
-	  <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="" data-upgraded=",MaterialButton">
-	  Tampikan yang lain
-	  <i class="material-icons">chevron_right</i>
-	  </a>
+   
    </div>
 </div>
 <div class="mdl-cell mdl-cell--4-col">
@@ -343,7 +342,7 @@
 					Ulasan
         </span>
       </div>
-			<div class="mdl-card__actions"> <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="<?php echo base_url()."index.php/pengguna/objek_wisata/".$row->id__objek_wisata__post ?>" data-upgraded=",MaterialButton">
+			<div class="mdl-card__actions"> <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="<?php echo base_url()."pengguna/objek_wisata/".$row->id__objek_wisata__post ?>" data-upgraded=",MaterialButton">
           Selengkapnya
           <i class="material-icons">chevron_right</i>
         </a>

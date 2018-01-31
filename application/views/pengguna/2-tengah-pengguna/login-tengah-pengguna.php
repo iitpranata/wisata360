@@ -68,7 +68,7 @@
                     <i class="fa fa-comment" aria-hidden="true" style="padding-left: 10px;"></i> 27 Ulasan
                  </span>
               </div>
-              <div class="mdl-card__actions"> <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="<?php echo base_url()."index.php/pengguna/objek_wisata/".$row->id__objek_wisata__post ?>" data-upgraded=",MaterialButton">
+              <div class="mdl-card__actions"> <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="<?php echo base_url()."pengguna/objek_wisata/".$row->id__objek_wisata__post ?>" data-upgraded=",MaterialButton">
                   Selengkapnya
                   <i class="material-icons">chevron_right</i>
                 </a>
@@ -79,7 +79,7 @@
      </div>
   </div>
   <?php }else { ?>
-  <div class="mdl-grid">
+  <div class="mdl-grid"  style="height: 467px;">
      <div class="mdl-cell mdl-cell--2-col"></div>
      <div class="mdl-cell mdl-cell--8-col" style="margin-top:80px;margin-bottom:100px;margin-left:auto;margin-right:auto;text-align:center;">
         <h2>Masuk</h2>

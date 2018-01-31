@@ -7,6 +7,14 @@ class Admin extends CI_Controller
     public function __construct()
     {
         parent::__construct();
+        if ($this->session->userdata('userData')['first_name']." ".$this->session->userdata('userData')['last_name'] == "Iit Pranata")
+        {
+            //do something
+        }
+        else
+        {
+            redirect(base_url()); //if session is not there, redirect to login page
+        }
         $this->load->model('Admin_model');
         $this->load->model('Collaborative_filter_model');
         $this->load->model('K_nearest_neighbor_model');

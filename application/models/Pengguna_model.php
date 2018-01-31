@@ -155,9 +155,14 @@ class Pengguna_model extends CI_Model{
 		foreach($query->result() as $row){
 			$data = $row->ulasan_objek_wisata__ulasan;
 		}
-		
 	}
 	
-
+	function pencarian_wisata($keyword)
+	{
+		$this->db->like('nama__objek_wisata__post',$keyword);
+		$this->db->from('objek_wisata__post');
+		$this->db->join('objek_wisata__rating', 'objek_wisata__rating.objek_wisata__post_id__objek_wisata__post = objek_wisata__post.id__objek_wisata__post', 'left');
+		return $this->db->get()->result();
+	}
 
 }
