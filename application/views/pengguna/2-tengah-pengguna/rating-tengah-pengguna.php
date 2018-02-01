@@ -176,7 +176,7 @@ Telah Meluangkan Waktu Untuk Memberikan Rating dan Ulasan Wisata Kota Bengkulu.
 	<div class="mdl-grid">
 		<div class="mdl-layout-spacer"></div>
 		<div class="mdl-cell mdl-cell--2-col">
-		<a href="<?php echo base_url().'pengguna/rating/' ?>" target="_blank" class="mdl-button mdl-js-button mdl-button--raised"> <i class="material-icons">chevron_right</i> Selanjutnya</a>
+		<a href="<?php echo base_url().'rating/' ?>" target="_blank" class="mdl-button mdl-js-button mdl-button--raised"> <i class="material-icons">chevron_right</i> Selanjutnya</a>
 		</div>
 		<div class="mdl-layout-spacer"></div>
 	</div>

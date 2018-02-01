@@ -12,7 +12,7 @@
                 <tbody>
                     <?php foreach ($rating_data as $row) { ?>
                     <tr>
-                        <td class="mdl-data-table__cell--non-numeric"><a href="<?php echo base_url()."index.php/admin/rating_objek_wisata/".$row->id__objek_wisata__post ?>" style="text-decoration:none;"><?php echo $row->nama__objek_wisata__post ?></a></td>
+                        <td class="mdl-data-table__cell--non-numeric"><a href="<?php echo base_url()."admin/rating_objek_wisata/".$row->id__objek_wisata__post ?>" style="text-decoration:none;"><?php echo $row->nama__objek_wisata__post ?></a></td>
                         <td><?php echo $row->average__objek_wisata__rating ?></td>
                         <td><?php echo $row->floor__objek_wisata__rating ?></td>
                         <td>
@@ -58,7 +58,7 @@
             </table>
             <hr>
             <h4>Nama Pengguna :</h4>
-                <form action="<?php echo base_url().'index.php/admin/rating' ?>">
+                <form action="<?php echo base_url().'admin/rating' ?>">
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="left: 16px;">
                         <input class="mdl-textfield__input" name="nama_pengguna" type="text" id="sample3">
                         <label class="mdl-textfield__label" for="sample3">Nama Pengguna</label>
@@ -114,7 +114,7 @@
                 <tbody>
                     <?php error_reporting(0); foreach ($cf as $row) { ?>
                     <tr>
-                        <td class="mdl-data-table__cell--non-numeric" ><a class="aksi" style="text-decoration: none;" target="blank_" href="<?php echo base_url()."index.php/pengguna/objek_wisata/".$row->id__objek_wisata__post ?>"><?php echo $row->nama__objek_wisata__post ?></a></td>
+                        <td class="mdl-data-table__cell--non-numeric" ><a class="aksi" style="text-decoration: none;" target="blank_" href="<?php echo base_url()."pengguna/objek_wisata/".$row->id__objek_wisata__post ?>"><?php echo $row->nama__objek_wisata__post ?></a></td>
                         <td id="tanggal"> 
                             <?php
                                 echo " (".$row->floor__objek_wisata__rating.") ";

@@ -101,7 +101,7 @@
           </h6>
     </div>
     <div class="mdl-card__actions mdl-card--border">
-        <a href="<?php echo base_url()."index.php/pengguna/objek_wisata/".$row->id__objek_wisata__post ?>" target="_blank" class="mdl-button mdl-js-button mdl-js-ripple-effect">Selengkapnya
+        <a href="<?php echo base_url()."pengguna/objek_wisata/".$row->id__objek_wisata__post ?>" target="_blank" class="mdl-button mdl-js-button mdl-js-ripple-effect">Selengkapnya
           <i class="material-icons">chevron_right</i></a>
     </div>
   </div>
@@ -172,7 +172,7 @@
             </h6>
       </div>
       <div class="mdl-card__actions mdl-card--border">
-          <a href="<?php echo base_url()."index.php/pengguna/objek_wisata/".$row->id__objek_wisata__post ?>" target="_blank" class="mdl-button mdl-js-button mdl-js-ripple-effect">Selengkapnya
+          <a href="<?php echo base_url()."pengguna/objek_wisata/".$row->id__objek_wisata__post ?>" target="_blank" class="mdl-button mdl-js-button mdl-js-ripple-effect">Selengkapnya
             <i class="material-icons">chevron_right</i></a>
       </div>
     </div>

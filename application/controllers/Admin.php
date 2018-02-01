@@ -13,7 +13,7 @@ class Admin extends CI_Controller
         }
         else
         {
-            redirect(base_url()); //if session is not there, redirect to login page
+            redirect('not-found'); //if session is not there, redirect to login page
         }
         $this->load->model('Admin_model');
         $this->load->model('Collaborative_filter_model');

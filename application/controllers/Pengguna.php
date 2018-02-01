@@ -186,7 +186,7 @@ class Pengguna extends CI_Controller {
 	{
 		$page_error = $this->uri->segment(3);
 		if($page_error == null){
-			redirect('pengguna/');
+			redirect('not-found');
 		}else{
 			$atas_pengguna = array(
 				'judul' => ' - Wisata360 | Cari Objek Wisata Panorama Virtual Reality?',
@@ -226,5 +226,31 @@ class Pengguna extends CI_Controller {
 			$this->load->view('pengguna/2-tengah-pengguna', $tengah_pengguna);
 			$this->load->view('pengguna/3-bawah-pengguna', $bawah_pengguna);
 		}
+	}
+
+	public function not_found()
+	{
+		$atas_pengguna = array(
+			'judul' => '404 - Wisata360 | Cari Objek Wisata Panorama Virtual Reality?',
+			'keterangan' => 'Sistem Rekomedasi Pariwisata Kota Bengkulu Berdasarkan Sentiment Analysis Dan Rating Dengan Pemodelan Vitrual Reality 360',
+			'meta_utama' => 'pengguna/1-atas-pengguna/meta-utama-atas-pengguna',
+			'css_utama' => 'pengguna/1-atas-pengguna/css-utama-atas-pengguna',
+			'css_profil' => 'pengguna/1-atas-pengguna/css-profil-atas-pengguna'
+		);
+
+		$tengah_pengguna = array(
+			'menu_utama' => 'pengguna/2-tengah-pengguna/menu-utama-tengah-pengguna',
+			'utama_tengah' => 'pengguna/2-tengah-pengguna/not-found',
+			'terima_kasih' => $this->Pengguna_model->terima_kasih(),
+		);
+
+		$bawah_pengguna = array(
+			'footer' => 'pengguna/3-bawah-pengguna/footer-bawah-pengguna',
+			'javascript_utama' => 'pengguna/3-bawah-pengguna/javascript-utama-bawah-pengguna'
+		);
+
+		$this->load->view('pengguna/1-atas-pengguna', $atas_pengguna);
+		$this->load->view('pengguna/2-tengah-pengguna', $tengah_pengguna);
+		$this->load->view('pengguna/3-bawah-pengguna', $bawah_pengguna);
 	}
 }

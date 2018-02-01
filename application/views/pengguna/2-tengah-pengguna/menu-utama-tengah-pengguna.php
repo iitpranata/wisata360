@@ -8,7 +8,7 @@
             
           </div>
           <?php if($this->session->userdata('userData')['oauth_uid'] > 0){ ?>
-            <a class="mdl-layout--small-screen-only" style="color: black; text-decoration: none;" href="<?php echo base_url() ?>index.php/pengguna/profil"><img src="<?php echo $this->session->userdata('userData')['picture_url']; ?>" style="height: 30px;width: 30px;"></a>
+            <a class="mdl-layout--small-screen-only" style="color: black; text-decoration: none;" href="<?php echo base_url() ?>pengguna/profil"><img src="<?php echo $this->session->userdata('userData')['picture_url']; ?>" style="height: 30px;width: 30px;"></a>
             <?php } else { } ?>
           <!-- Navigation -->
           <div class="android-navigation-container">
@@ -21,8 +21,8 @@
                 <i class="material-icons" style="padding-top: 3px;">expand_more</i>
               </button>
             <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="demo-menu-lower-right">
-                <li class="mdl-menu__item"><a style="color: black; text-decoration: none;" href="<?php echo base_url() ?>index.php/pengguna/profil">Profil</a></li>
-                <li class="mdl-menu__item"><a style="color: black; text-decoration: none;" href="<?php echo base_url() ?>index.php/pengguna_login_facebook/logout">Keluar</a></li>
+                <li class="mdl-menu__item"><a style="color: black; text-decoration: none;" href="<?php echo base_url() ?>pengguna/profil">Profil</a></li>
+                <li class="mdl-menu__item"><a style="color: black; text-decoration: none;" href="<?php echo base_url() ?>pengguna_login_facebook/logout">Keluar</a></li>
             </ul>
           </nav>
           <?php } else { ?> 
@@ -50,11 +50,11 @@
           <?php echo form_close() ?>
         <?php if($this->session->userdata('userData')['oauth_uid'] > 0){ ?>
           <a class="mdl-navigation__link" href="<?php echo base_url(); ?>"><i class="material-icons">collections</i> DESTINASI</a>
-          <a class="mdl-navigation__link" href="<?php echo base_url() ?>index.php/pengguna_login_facebook/logout"><i class="material-icons">exit_to_app</i> KELUAR</a>
+          <a class="mdl-navigation__link" href="<?php echo base_url() ?>pengguna_login_facebook/logout"><i class="material-icons">exit_to_app</i> KELUAR</a>
           
         <?php }else{ ?>
           <a class="mdl-navigation__link" href="<?php echo base_url(); ?>"><i class="material-icons">collections</i> DESTINASI</a>
-          <a class="mdl-navigation__link" href="<?php echo base_url(); ?>index.php/pengguna_login_facebook/"><i class="material-icons">exit_to_app</i> MASUK / DAFTAR</a>
+          <a class="mdl-navigation__link" href="<?php echo base_url(); ?>pengguna_login_facebook/"><i class="material-icons">exit_to_app</i> MASUK / DAFTAR</a>
         <?php } ?>
         </nav>
       </div>
