@@ -57,7 +57,7 @@
                         <td><?php echo $row->tanggal__objek_wisata__rating_ulasan ?></td>
                         <td  class="mdl-data-table__cell--non-numeric"><a style="text-decoration:none; color: blue;" href="<?php echo $row->profile_url; ?>"><?php echo $row->first_name." ".$row->last_name;  ?></a></td>
                         <td>
-                            <a class="aksi" style="text-decoration: none;" href=""> Hapus</a>
+                            <a class="aksi" style="text-decoration: none;" href="<?php echo base_url()."admin_edit/hapus_ulasan_rating/".$row->objek_wisata__post_id__objek_wisata__post ?>"> Hapus</a>
                         </td>
                         <?php } ?>
                     </tr>

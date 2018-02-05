@@ -42,7 +42,7 @@ class Admin_tambah extends CI_Controller {
                     'nama__objek_wisata__post' => $this->input->post('nama_wisata'),
                     'alamat__objek_wisata__post' => $this->input->post('alamat_wisata'),
                     'kategori__objek_wisata__post' => $this->input->post('kategori_wisata'),
-                    'tanggal__objek_wisata__post' => date('d-m-y'),
+                    'tanggal__objek_wisata__post' => date("Y-m-d H:i:s"),
                     'keterangan__objek_wisata__post' => $this->input->post('keterangan_wisata'),
                     'lat_map__objek_wisata__post' => $this->input->post('lat_wisata'),
                     'lng_map__objek_wisata__post' => $this->input->post('lng_wisata'),

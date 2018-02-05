@@ -25,7 +25,7 @@ class Pengguna_tambah extends CI_Controller {
             'objek_wisata__post_id__objek_wisata__post' => $this->input->post('id_objekwisata_post'),
             'rating__objek_wisata__rating_ulasan' => $this->input->post('hasil_rating'),
             'ulasan__objek_wisata__rating_ulasan' => $this->input->post('hasil_ulasan'),
-            'tanggal__objek_wisata__rating_ulasan' => date('d-m-y h:i:s'),
+            'tanggal__objek_wisata__rating_ulasan' => date("Y-m-d H:i:s"),
         );
         $this->Pengguna_tambah_model->objek_wisata__rating_ulasan($objek_wisata_rating_ulasan);
         

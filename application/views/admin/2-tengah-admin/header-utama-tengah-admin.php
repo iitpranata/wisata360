@@ -20,5 +20,6 @@
           }
           ?></span>
           <div class="mdl-layout-spacer"></div>
+          <h6><?php echo date("Y-m-d H:i:s") ?></h6>
         </div>
       </header>

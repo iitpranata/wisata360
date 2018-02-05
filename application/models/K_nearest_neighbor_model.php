@@ -106,6 +106,7 @@ class K_nearest_neighbor_model extends CI_Model {
                 $skalar[$h] = round($skalars, 3);
             }
             
+            error_reporting(0);
             foreach ($idf as $key => $value) {
                 $sumArray = array_sum($value);
                 $sumSQRT = sqrt($sumArray);
@@ -286,6 +287,7 @@ class K_nearest_neighbor_model extends CI_Model {
                 $skalar[$h] = round($skalars, 3);
             }
             
+            error_reporting(0);
             foreach ($idf as $key => $value) {
                 $sumArray = array_sum($value);
                 $sumSQRT = sqrt($sumArray);

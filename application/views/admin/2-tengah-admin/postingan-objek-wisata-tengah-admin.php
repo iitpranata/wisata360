@@ -72,7 +72,7 @@
                         <td id="tanggal"><?php echo $row->kategori__objek_wisata__post ?></td>
                         <td><a class="aksi" style="text-decoration: none;" target="blank_" href="<?php echo base_url()."pengguna/objek_wisata/".$row->id__objek_wisata__post ?>">Lihat </a>|
                             <a class="aksi" style="text-decoration: none;" target="blank_" href="<?php echo base_url()."admin/edit_objek_wisata/".$row->id__objek_wisata__post?>"> Edit </a>|
-                            <a class="aksi" style="text-decoration: none;" href=""> Hapus</a>
+                            <a class="aksi" style="text-decoration: none;" href="<?php echo base_url()."admin_edit/hapus_ulasan_rating/".$row->objek_wisata__post_id__objek_wisata__post ?>"> Hapus</a>
                         </td>
                         <?php } ?>
                     </tr>
